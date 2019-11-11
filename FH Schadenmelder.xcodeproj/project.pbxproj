@@ -1,0 +1,651 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		C7CC21F2237842B100C71102 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7CC21F1237842B100C71102 /* AppDelegate.swift */; };
+		C7CC21F4237842B100C71102 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7CC21F3237842B100C71102 /* ViewController.swift */; };
+		C7CC21F7237842B100C71102 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C7CC21F5237842B100C71102 /* Main.storyboard */; };
+		C7CC21F9237842B500C71102 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C7CC21F8237842B500C71102 /* Assets.xcassets */; };
+		C7CC21FC237842B500C71102 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C7CC21FA237842B500C71102 /* LaunchScreen.storyboard */; };
+		C7CC2207237842B500C71102 /* FH_SchadenmelderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7CC2206237842B500C71102 /* FH_SchadenmelderTests.swift */; };
+		C7CC2212237842B600C71102 /* FH_SchadenmelderUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7CC2211237842B600C71102 /* FH_SchadenmelderUITests.swift */; };
+		C7CC22212378453A00C71102 /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7CC22202378453A00C71102 /* LoginController.swift */; };
+		C7CC22232378454F00C71102 /* LoginController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C7CC22222378454F00C71102 /* LoginController.xib */; };
+		C7CC2226237848B300C71102 /* HomeController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C7CC2225237848B300C71102 /* HomeController.xib */; };
+		C7CC2228237848C700C71102 /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7CC2227237848C700C71102 /* HomeController.swift */; };
+		C7CC222B23784A1700C71102 /* SchadenListeController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C7CC222A23784A1700C71102 /* SchadenListeController.xib */; };
+		C7CC222D23784A3F00C71102 /* SchadenListeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7CC222C23784A3F00C71102 /* SchadenListeController.swift */; };
+		C7CC22302378513800C71102 /* FH-CAMPUS-WIEN.gif in Resources */ = {isa = PBXBuildFile; fileRef = C7CC222F2378513800C71102 /* FH-CAMPUS-WIEN.gif */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		C7CC2203237842B500C71102 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C7CC21E6237842B100C71102 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C7CC21ED237842B100C71102;
+			remoteInfo = "FH Schadenmelder";
+		};
+		C7CC220E237842B600C71102 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C7CC21E6237842B100C71102 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C7CC21ED237842B100C71102;
+			remoteInfo = "FH Schadenmelder";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		C7CC21EE237842B100C71102 /* FH Schadenmelder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "FH Schadenmelder.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C7CC21F1237842B100C71102 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		C7CC21F3237842B100C71102 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		C7CC21F6237842B100C71102 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		C7CC21F8237842B500C71102 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		C7CC21FB237842B500C71102 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		C7CC21FD237842B500C71102 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C7CC2202237842B500C71102 /* FH SchadenmelderTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "FH SchadenmelderTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C7CC2206237842B500C71102 /* FH_SchadenmelderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FH_SchadenmelderTests.swift; sourceTree = "<group>"; };
+		C7CC2208237842B500C71102 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C7CC220D237842B600C71102 /* FH SchadenmelderUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "FH SchadenmelderUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C7CC2211237842B600C71102 /* FH_SchadenmelderUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FH_SchadenmelderUITests.swift; sourceTree = "<group>"; };
+		C7CC2213237842B600C71102 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C7CC22202378453A00C71102 /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
+		C7CC22222378454F00C71102 /* LoginController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginController.xib; sourceTree = "<group>"; };
+		C7CC2225237848B300C71102 /* HomeController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeController.xib; sourceTree = "<group>"; };
+		C7CC2227237848C700C71102 /* HomeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeController.swift; sourceTree = "<group>"; };
+		C7CC222A23784A1700C71102 /* SchadenListeController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SchadenListeController.xib; sourceTree = "<group>"; };
+		C7CC222C23784A3F00C71102 /* SchadenListeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchadenListeController.swift; sourceTree = "<group>"; };
+		C7CC222F2378513800C71102 /* FH-CAMPUS-WIEN.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = "FH-CAMPUS-WIEN.gif"; path = "../../../Downloads/FH-CAMPUS-WIEN.gif"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C7CC21EB237842B100C71102 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C7CC21FF237842B500C71102 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C7CC220A237842B600C71102 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		C7CC21E5237842B100C71102 = {
+			isa = PBXGroup;
+			children = (
+				C7CC222E2378511E00C71102 /* img */,
+				C7CC221F2378449400C71102 /* Controller */,
+				C7CC21F0237842B100C71102 /* FH Schadenmelder */,
+				C7CC2205237842B500C71102 /* FH SchadenmelderTests */,
+				C7CC2210237842B600C71102 /* FH SchadenmelderUITests */,
+				C7CC21EF237842B100C71102 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		C7CC21EF237842B100C71102 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C7CC21EE237842B100C71102 /* FH Schadenmelder.app */,
+				C7CC2202237842B500C71102 /* FH SchadenmelderTests.xctest */,
+				C7CC220D237842B600C71102 /* FH SchadenmelderUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C7CC21F0237842B100C71102 /* FH Schadenmelder */ = {
+			isa = PBXGroup;
+			children = (
+				C7CC21F1237842B100C71102 /* AppDelegate.swift */,
+				C7CC21F3237842B100C71102 /* ViewController.swift */,
+				C7CC21F5237842B100C71102 /* Main.storyboard */,
+				C7CC21F8237842B500C71102 /* Assets.xcassets */,
+				C7CC21FA237842B500C71102 /* LaunchScreen.storyboard */,
+				C7CC21FD237842B500C71102 /* Info.plist */,
+			);
+			path = "FH Schadenmelder";
+			sourceTree = "<group>";
+		};
+		C7CC2205237842B500C71102 /* FH SchadenmelderTests */ = {
+			isa = PBXGroup;
+			children = (
+				C7CC2206237842B500C71102 /* FH_SchadenmelderTests.swift */,
+				C7CC2208237842B500C71102 /* Info.plist */,
+			);
+			path = "FH SchadenmelderTests";
+			sourceTree = "<group>";
+		};
+		C7CC2210237842B600C71102 /* FH SchadenmelderUITests */ = {
+			isa = PBXGroup;
+			children = (
+				C7CC2211237842B600C71102 /* FH_SchadenmelderUITests.swift */,
+				C7CC2213237842B600C71102 /* Info.plist */,
+			);
+			path = "FH SchadenmelderUITests";
+			sourceTree = "<group>";
+		};
+		C7CC221F2378449400C71102 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				C7CC2229237849EF00C71102 /* SchadenListeController */,
+				C7CC22242378489400C71102 /* Home */,
+				C7CC22202378453A00C71102 /* LoginController.swift */,
+				C7CC22222378454F00C71102 /* LoginController.xib */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		C7CC22242378489400C71102 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				C7CC2225237848B300C71102 /* HomeController.xib */,
+				C7CC2227237848C700C71102 /* HomeController.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		C7CC2229237849EF00C71102 /* SchadenListeController */ = {
+			isa = PBXGroup;
+			children = (
+				C7CC222A23784A1700C71102 /* SchadenListeController.xib */,
+				C7CC222C23784A3F00C71102 /* SchadenListeController.swift */,
+			);
+			path = SchadenListeController;
+			sourceTree = "<group>";
+		};
+		C7CC222E2378511E00C71102 /* img */ = {
+			isa = PBXGroup;
+			children = (
+				C7CC222F2378513800C71102 /* FH-CAMPUS-WIEN.gif */,
+			);
+			path = img;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		C7CC21ED237842B100C71102 /* FH Schadenmelder */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C7CC2216237842B600C71102 /* Build configuration list for PBXNativeTarget "FH Schadenmelder" */;
+			buildPhases = (
+				C7CC21EA237842B100C71102 /* Sources */,
+				C7CC21EB237842B100C71102 /* Frameworks */,
+				C7CC21EC237842B100C71102 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "FH Schadenmelder";
+			productName = "FH Schadenmelder";
+			productReference = C7CC21EE237842B100C71102 /* FH Schadenmelder.app */;
+			productType = "com.apple.product-type.application";
+		};
+		C7CC2201237842B500C71102 /* FH SchadenmelderTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C7CC2219237842B600C71102 /* Build configuration list for PBXNativeTarget "FH SchadenmelderTests" */;
+			buildPhases = (
+				C7CC21FE237842B500C71102 /* Sources */,
+				C7CC21FF237842B500C71102 /* Frameworks */,
+				C7CC2200237842B500C71102 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C7CC2204237842B500C71102 /* PBXTargetDependency */,
+			);
+			name = "FH SchadenmelderTests";
+			productName = "FH SchadenmelderTests";
+			productReference = C7CC2202237842B500C71102 /* FH SchadenmelderTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		C7CC220C237842B600C71102 /* FH SchadenmelderUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C7CC221C237842B600C71102 /* Build configuration list for PBXNativeTarget "FH SchadenmelderUITests" */;
+			buildPhases = (
+				C7CC2209237842B600C71102 /* Sources */,
+				C7CC220A237842B600C71102 /* Frameworks */,
+				C7CC220B237842B600C71102 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C7CC220F237842B600C71102 /* PBXTargetDependency */,
+			);
+			name = "FH SchadenmelderUITests";
+			productName = "FH SchadenmelderUITests";
+			productReference = C7CC220D237842B600C71102 /* FH SchadenmelderUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C7CC21E6237842B100C71102 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1030;
+				LastUpgradeCheck = 1030;
+				ORGANIZATIONNAME = "Nemanja Filipovic, Michael Prammer, Elmi  Abdullahi";
+				TargetAttributes = {
+					C7CC21ED237842B100C71102 = {
+						CreatedOnToolsVersion = 10.3;
+					};
+					C7CC2201237842B500C71102 = {
+						CreatedOnToolsVersion = 10.3;
+						TestTargetID = C7CC21ED237842B100C71102;
+					};
+					C7CC220C237842B600C71102 = {
+						CreatedOnToolsVersion = 10.3;
+						TestTargetID = C7CC21ED237842B100C71102;
+					};
+				};
+			};
+			buildConfigurationList = C7CC21E9237842B100C71102 /* Build configuration list for PBXProject "FH Schadenmelder" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = C7CC21E5237842B100C71102;
+			productRefGroup = C7CC21EF237842B100C71102 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C7CC21ED237842B100C71102 /* FH Schadenmelder */,
+				C7CC2201237842B500C71102 /* FH SchadenmelderTests */,
+				C7CC220C237842B600C71102 /* FH SchadenmelderUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C7CC21EC237842B100C71102 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C7CC21FC237842B500C71102 /* LaunchScreen.storyboard in Resources */,
+				C7CC22232378454F00C71102 /* LoginController.xib in Resources */,
+				C7CC22302378513800C71102 /* FH-CAMPUS-WIEN.gif in Resources */,
+				C7CC21F9237842B500C71102 /* Assets.xcassets in Resources */,
+				C7CC2226237848B300C71102 /* HomeController.xib in Resources */,
+				C7CC222B23784A1700C71102 /* SchadenListeController.xib in Resources */,
+				C7CC21F7237842B100C71102 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C7CC2200237842B500C71102 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C7CC220B237842B600C71102 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C7CC21EA237842B100C71102 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C7CC222D23784A3F00C71102 /* SchadenListeController.swift in Sources */,
+				C7CC2228237848C700C71102 /* HomeController.swift in Sources */,
+				C7CC21F4237842B100C71102 /* ViewController.swift in Sources */,
+				C7CC22212378453A00C71102 /* LoginController.swift in Sources */,
+				C7CC21F2237842B100C71102 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C7CC21FE237842B500C71102 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C7CC2207237842B500C71102 /* FH_SchadenmelderTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C7CC2209237842B600C71102 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C7CC2212237842B600C71102 /* FH_SchadenmelderUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		C7CC2204237842B500C71102 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C7CC21ED237842B100C71102 /* FH Schadenmelder */;
+			targetProxy = C7CC2203237842B500C71102 /* PBXContainerItemProxy */;
+		};
+		C7CC220F237842B600C71102 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C7CC21ED237842B100C71102 /* FH Schadenmelder */;
+			targetProxy = C7CC220E237842B600C71102 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		C7CC21F5237842B100C71102 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C7CC21F6237842B100C71102 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		C7CC21FA237842B500C71102 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C7CC21FB237842B500C71102 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		C7CC2214237842B600C71102 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		C7CC2215237842B600C71102 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C7CC2217237842B600C71102 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7FA332Z5WX;
+				INFOPLIST_FILE = "FH Schadenmelder/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.fh.campus..FH-Schadenmelder";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		C7CC2218237842B600C71102 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7FA332Z5WX;
+				INFOPLIST_FILE = "FH Schadenmelder/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.fh.campus..FH-Schadenmelder";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		C7CC221A237842B600C71102 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7FA332Z5WX;
+				INFOPLIST_FILE = "FH SchadenmelderTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.fh.campus..FH-SchadenmelderTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FH Schadenmelder.app/FH Schadenmelder";
+			};
+			name = Debug;
+		};
+		C7CC221B237842B600C71102 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7FA332Z5WX;
+				INFOPLIST_FILE = "FH SchadenmelderTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.fh.campus..FH-SchadenmelderTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FH Schadenmelder.app/FH Schadenmelder";
+			};
+			name = Release;
+		};
+		C7CC221D237842B600C71102 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7FA332Z5WX;
+				INFOPLIST_FILE = "FH SchadenmelderUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.fh.campus..FH-SchadenmelderUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "FH Schadenmelder";
+			};
+			name = Debug;
+		};
+		C7CC221E237842B600C71102 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7FA332Z5WX;
+				INFOPLIST_FILE = "FH SchadenmelderUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.fh.campus..FH-SchadenmelderUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "FH Schadenmelder";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C7CC21E9237842B100C71102 /* Build configuration list for PBXProject "FH Schadenmelder" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C7CC2214237842B600C71102 /* Debug */,
+				C7CC2215237842B600C71102 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C7CC2216237842B600C71102 /* Build configuration list for PBXNativeTarget "FH Schadenmelder" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C7CC2217237842B600C71102 /* Debug */,
+				C7CC2218237842B600C71102 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C7CC2219237842B600C71102 /* Build configuration list for PBXNativeTarget "FH SchadenmelderTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C7CC221A237842B600C71102 /* Debug */,
+				C7CC221B237842B600C71102 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C7CC221C237842B600C71102 /* Build configuration list for PBXNativeTarget "FH SchadenmelderUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C7CC221D237842B600C71102 /* Debug */,
+				C7CC221E237842B600C71102 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = C7CC21E6237842B100C71102 /* Project object */;
+}
