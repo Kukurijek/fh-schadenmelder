@@ -60,7 +60,7 @@
 		C7CC2227237848C700C71102 /* HomeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeController.swift; sourceTree = "<group>"; };
 		C7CC222A23784A1700C71102 /* SchadenListeController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SchadenListeController.xib; sourceTree = "<group>"; };
 		C7CC222C23784A3F00C71102 /* SchadenListeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchadenListeController.swift; sourceTree = "<group>"; };
-		C7CC222F2378513800C71102 /* FH-CAMPUS-WIEN.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = "FH-CAMPUS-WIEN.gif"; path = "../../../Downloads/FH-CAMPUS-WIEN.gif"; sourceTree = "<group>"; };
+		C7CC222F2378513800C71102 /* FH-CAMPUS-WIEN.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "FH-CAMPUS-WIEN.gif"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
