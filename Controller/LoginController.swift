@@ -16,6 +16,7 @@ class LoginController: UIViewController {
     
     @IBOutlet weak var passwordField: UITextField!
     
+
     override func viewDidLoad() {
         usernameField.delegate = self
         passwordField.delegate = self
@@ -28,5 +29,10 @@ class LoginController: UIViewController {
     
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+    @IBAction func loginButton(_ sender: Any) {
+        let vc = HomeController()
+        vc.modalPresentationStyle = .fullScreen //or .overFullScreen for transparency
+        self.present(vc, animated: true, completion: nil)
     }
 }

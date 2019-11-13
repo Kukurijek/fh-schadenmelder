@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		C738A693237C8950002A49E3 /* extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C738A692237C894F002A49E3 /* extensions.swift */; };
+		C738A695237CA20E002A49E3 /* campus.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C738A694237CA20D002A49E3 /* campus.jpg */; };
 		C7CC21F2237842B100C71102 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7CC21F1237842B100C71102 /* AppDelegate.swift */; };
 		C7CC21F4237842B100C71102 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7CC21F3237842B100C71102 /* ViewController.swift */; };
 		C7CC21F7237842B100C71102 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C7CC21F5237842B100C71102 /* Main.storyboard */; };
@@ -43,6 +44,7 @@
 
 /* Begin PBXFileReference section */
 		C738A692237C894F002A49E3 /* extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = extensions.swift; sourceTree = "<group>"; };
+		C738A694237CA20D002A49E3 /* campus.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = campus.jpg; sourceTree = "<group>"; };
 		C7CC21EE237842B100C71102 /* FH Schadenmelder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "FH Schadenmelder.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C7CC21F1237842B100C71102 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C7CC21F3237842B100C71102 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -166,8 +168,8 @@
 		C7CC22242378489400C71102 /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				C7CC2225237848B300C71102 /* HomeController.xib */,
 				C7CC2227237848C700C71102 /* HomeController.swift */,
+				C7CC2225237848B300C71102 /* HomeController.xib */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -184,6 +186,7 @@
 		C7CC222E2378511E00C71102 /* img */ = {
 			isa = PBXGroup;
 			children = (
+				C738A694237CA20D002A49E3 /* campus.jpg */,
 				C7CC222F2378513800C71102 /* FH-CAMPUS-WIEN.gif */,
 			);
 			path = img;
@@ -295,6 +298,7 @@
 			files = (
 				C7CC21FC237842B500C71102 /* LaunchScreen.storyboard in Resources */,
 				C7CC22232378454F00C71102 /* LoginController.xib in Resources */,
+				C738A695237CA20E002A49E3 /* campus.jpg in Resources */,
 				C7CC22302378513800C71102 /* FH-CAMPUS-WIEN.gif in Resources */,
 				C7CC21F9237842B500C71102 /* Assets.xcassets in Resources */,
 				C7CC2226237848B300C71102 /* HomeController.xib in Resources */,

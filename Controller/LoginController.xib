@@ -12,7 +12,7 @@
             <connections>
                 <outlet property="passwordField" destination="Yfk-wn-hmE" id="Ror-Q6-11x"/>
                 <outlet property="usernameField" destination="uwv-oy-evc" id="zIb-Oa-0Zn"/>
-                <outlet property="view" destination="iN0-l3-epB" id="0rU-r5-fGQ"/>
+                <outlet property="view" destination="iN0-l3-epB" id="Tkz-dp-7kk"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
@@ -60,9 +60,12 @@
                     <state key="normal" title="Login">
                         <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                     </state>
+                    <connections>
+                        <action selector="loginButton:" destination="-1" eventType="touchDown" id="YfU-GE-PQd"/>
+                    </connections>
                 </button>
             </subviews>
-            <color key="backgroundColor" red="0.087225921323481892" green="0.059445199911133541" blue="0.16471016839378239" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <point key="canvasLocation" x="137.68115942028987" y="152.67857142857142"/>
         </view>
