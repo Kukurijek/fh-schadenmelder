@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C738A693237C8950002A49E3 /* extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C738A692237C894F002A49E3 /* extensions.swift */; };
 		C7CC21F2237842B100C71102 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7CC21F1237842B100C71102 /* AppDelegate.swift */; };
 		C7CC21F4237842B100C71102 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7CC21F3237842B100C71102 /* ViewController.swift */; };
 		C7CC21F7237842B100C71102 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C7CC21F5237842B100C71102 /* Main.storyboard */; };
@@ -41,6 +42,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C738A692237C894F002A49E3 /* extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = extensions.swift; sourceTree = "<group>"; };
 		C7CC21EE237842B100C71102 /* FH Schadenmelder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "FH Schadenmelder.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C7CC21F1237842B100C71102 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C7CC21F3237842B100C71102 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -88,6 +90,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C738A691237C891D002A49E3 /* extensions */ = {
+			isa = PBXGroup;
+			children = (
+				C738A692237C894F002A49E3 /* extensions.swift */,
+			);
+			path = extensions;
+			sourceTree = "<group>";
+		};
 		C7CC21E5237842B100C71102 = {
 			isa = PBXGroup;
 			children = (
@@ -97,6 +107,7 @@
 				C7CC2205237842B500C71102 /* FH SchadenmelderTests */,
 				C7CC2210237842B600C71102 /* FH SchadenmelderUITests */,
 				C7CC21EF237842B100C71102 /* Products */,
+				C738A691237C891D002A49E3 /* extensions */,
 			);
 			sourceTree = "<group>";
 		};
@@ -318,6 +329,7 @@
 				C7CC21F4237842B100C71102 /* ViewController.swift in Sources */,
 				C7CC22212378453A00C71102 /* LoginController.swift in Sources */,
 				C7CC21F2237842B100C71102 /* AppDelegate.swift in Sources */,
+				C738A693237C8950002A49E3 /* extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

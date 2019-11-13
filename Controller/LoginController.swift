@@ -12,6 +12,15 @@ import UIKit
 
 class LoginController: UIViewController {
     
+    @IBOutlet weak var usernameField: UITextField!
+    
+    @IBOutlet weak var passwordField: UITextField!
+    
+    override func viewDidLoad() {
+        usernameField.delegate = self
+        passwordField.delegate = self
+    }
+    
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
         super.init(nibName: nil, bundle: nil)
     }
