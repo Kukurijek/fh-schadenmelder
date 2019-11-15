@@ -1,0 +1,6 @@
+framework module Pods_FH_Schadenmelder {
+  umbrella header "Pods-FH Schadenmelder-umbrella.h"
+
+  export *
+  module * { export * }
+}
