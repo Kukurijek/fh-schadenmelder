@@ -26,7 +26,11 @@ class HomeController: UIViewController {
   }
     
     @IBAction func LogoutButton(_ sender: Any) {
-        try! Auth.auth().signOut()
+        do {
+            try Auth.auth().signOut()
+        } catch let logoutError {
+            print(logoutError.localizedDescription)
+        }
         print("Logout successful")
         let vc = LoginController()
         vc.modalPresentationStyle = .fullScreen //or .overFullScreen for transparency
