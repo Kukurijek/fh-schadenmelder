@@ -8,12 +8,12 @@
 
 import Foundation
 import UIKit
+import FirebaseAuth
 
 
 class LoginController: UIViewController {
     
     @IBOutlet weak var usernameField: UITextField!
-    
     @IBOutlet weak var passwordField: UITextField!
     
 
@@ -33,9 +33,18 @@ class LoginController: UIViewController {
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
+    
     @IBAction func loginButton(_ sender: Any) {
+        Auth.auth().signIn(withEmail: usernameField.text!, password: passwordField.text!) { (user, error) in
+            if let err = error {
+                print(err.localizedDescription)
+                return
+            }
+        print("gecooo")
         let vc = HomeController()
         vc.modalPresentationStyle = .fullScreen //or .overFullScreen for transparency
         self.present(vc, animated: true, completion: nil)
+        }
+
     }
 }
