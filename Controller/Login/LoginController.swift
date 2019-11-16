@@ -9,6 +9,7 @@
 import Foundation
 import UIKit
 import FirebaseAuth
+import SystemConfiguration.CaptiveNetwork
 
 class LoginController: UIViewController {
     
@@ -19,6 +20,8 @@ class LoginController: UIViewController {
     override func viewDidLoad() {
         usernameField.delegate = self
         passwordField.delegate = self
+        var a = UIDevice.current.identifierForVendor?.uuidString
+        print(getWiFiSsid())
     }
     
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
@@ -44,6 +47,17 @@ class LoginController: UIViewController {
         vc.modalPresentationStyle = .fullScreen //or .overFullScreen for transparency
         self.present(vc, animated: true, completion: nil)
         }
-
+    }
+    func getWiFiSsid() -> String? {
+    var ssid: String?
+    if let interfaces = CNCopySupportedInterfaces() as NSArray? {
+    for interface in interfaces {
+    if let interfaceInfo = CNCopyCurrentNetworkInfo(interface as! CFString) as NSDictionary? {
+                    ssid = interfaceInfo[kCNNetworkInfoKeySSID as String] as? String
+    break
+                }
+            }
+        }
+    return ssid
     }
 }

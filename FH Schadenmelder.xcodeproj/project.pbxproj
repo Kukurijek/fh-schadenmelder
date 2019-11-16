@@ -13,6 +13,7 @@
 		C728459E23802848000DC419 /* SchadenMeldenController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C728459D23802848000DC419 /* SchadenMeldenController.swift */; };
 		C72845A2238036C6000DC419 /* CameraController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C72845A1238036C6000DC419 /* CameraController.xib */; };
 		C72845A4238036D3000DC419 /* CameraController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C72845A3238036D3000DC419 /* CameraController.swift */; };
+		C72845AF23806190000DC419 /* ExternalAccessory.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C72845AE23806190000DC419 /* ExternalAccessory.framework */; settings = {ATTRIBUTES = (Required, ); }; };
 		C738A693237C8950002A49E3 /* extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C738A692237C894F002A49E3 /* extensions.swift */; };
 		C738A695237CA20E002A49E3 /* campus.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C738A694237CA20D002A49E3 /* campus.jpg */; };
 		C738A697237E9827002A49E3 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C738A696237E9827002A49E3 /* GoogleService-Info.plist */; };
@@ -64,6 +65,8 @@
 		C728459D23802848000DC419 /* SchadenMeldenController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchadenMeldenController.swift; sourceTree = "<group>"; };
 		C72845A1238036C6000DC419 /* CameraController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CameraController.xib; sourceTree = "<group>"; };
 		C72845A3238036D3000DC419 /* CameraController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraController.swift; sourceTree = "<group>"; };
+		C72845AD23806190000DC419 /* FH Schadenmelder.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "FH Schadenmelder.entitlements"; sourceTree = "<group>"; };
+		C72845AE23806190000DC419 /* ExternalAccessory.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ExternalAccessory.framework; path = System/Library/Frameworks/ExternalAccessory.framework; sourceTree = SDKROOT; };
 		C738A692237C894F002A49E3 /* extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = extensions.swift; sourceTree = "<group>"; };
 		C738A694237CA20D002A49E3 /* campus.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = campus.jpg; sourceTree = "<group>"; };
 		C738A696237E9827002A49E3 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -96,6 +99,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C72845AF23806190000DC419 /* ExternalAccessory.framework in Frameworks */,
 				EF4EE25604E97FA447B2DE15 /* Pods_FH_Schadenmelder.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -122,6 +126,7 @@
 		60EDFFD2A5C4D6CCE8C9320D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				C72845AE23806190000DC419 /* ExternalAccessory.framework */,
 				26502B4B308BE53487099F10 /* Pods_FH_Schadenmelder.framework */,
 				D7A7BC8DE72772D5E912F6E8 /* Pods_FH_Schadenmelder_FH_SchadenmelderUITests.framework */,
 				53FC7B1CA412C71DA78335C3 /* Pods_FH_SchadenmelderTests.framework */,
@@ -206,6 +211,7 @@
 		C7CC21F0237842B100C71102 /* FH Schadenmelder */ = {
 			isa = PBXGroup;
 			children = (
+				C72845AD23806190000DC419 /* FH Schadenmelder.entitlements */,
 				C7CC21F1237842B100C71102 /* AppDelegate.swift */,
 				C7CC21F3237842B100C71102 /* ViewController.swift */,
 				C7CC21F5237842B100C71102 /* Main.storyboard */,
@@ -705,6 +711,7 @@
 			baseConfigurationReference = 528571B6C9FAA5D13A65D0DD /* Pods-FH Schadenmelder.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "FH Schadenmelder/FH Schadenmelder.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7FA332Z5WX;
 				INFOPLIST_FILE = "FH Schadenmelder/Info.plist";
@@ -724,6 +731,7 @@
 			baseConfigurationReference = B4DA1903EE0C79B2B0731BB4 /* Pods-FH Schadenmelder.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "FH Schadenmelder/FH Schadenmelder.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7FA332Z5WX;
 				INFOPLIST_FILE = "FH Schadenmelder/Info.plist";
