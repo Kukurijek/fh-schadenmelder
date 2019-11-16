@@ -11,6 +11,8 @@
 		2F09D869B0C5D27F75FACC2C /* Pods_FH_Schadenmelder_FH_SchadenmelderUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7A7BC8DE72772D5E912F6E8 /* Pods_FH_Schadenmelder_FH_SchadenmelderUITests.framework */; };
 		C728459C23802831000DC419 /* SchadenMeldenController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C728459B23802831000DC419 /* SchadenMeldenController.xib */; };
 		C728459E23802848000DC419 /* SchadenMeldenController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C728459D23802848000DC419 /* SchadenMeldenController.swift */; };
+		C72845A2238036C6000DC419 /* CameraController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C72845A1238036C6000DC419 /* CameraController.xib */; };
+		C72845A4238036D3000DC419 /* CameraController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C72845A3238036D3000DC419 /* CameraController.swift */; };
 		C738A693237C8950002A49E3 /* extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C738A692237C894F002A49E3 /* extensions.swift */; };
 		C738A695237CA20E002A49E3 /* campus.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C738A694237CA20D002A49E3 /* campus.jpg */; };
 		C738A697237E9827002A49E3 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C738A696237E9827002A49E3 /* GoogleService-Info.plist */; };
@@ -60,6 +62,8 @@
 		B4DA1903EE0C79B2B0731BB4 /* Pods-FH Schadenmelder.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FH Schadenmelder.release.xcconfig"; path = "Target Support Files/Pods-FH Schadenmelder/Pods-FH Schadenmelder.release.xcconfig"; sourceTree = "<group>"; };
 		C728459B23802831000DC419 /* SchadenMeldenController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SchadenMeldenController.xib; sourceTree = "<group>"; };
 		C728459D23802848000DC419 /* SchadenMeldenController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchadenMeldenController.swift; sourceTree = "<group>"; };
+		C72845A1238036C6000DC419 /* CameraController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CameraController.xib; sourceTree = "<group>"; };
+		C72845A3238036D3000DC419 /* CameraController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraController.swift; sourceTree = "<group>"; };
 		C738A692237C894F002A49E3 /* extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = extensions.swift; sourceTree = "<group>"; };
 		C738A694237CA20D002A49E3 /* campus.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = campus.jpg; sourceTree = "<group>"; };
 		C738A696237E9827002A49E3 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -156,6 +160,15 @@
 			path = Login;
 			sourceTree = "<group>";
 		};
+		C72845A02380369E000DC419 /* CameraController */ = {
+			isa = PBXGroup;
+			children = (
+				C72845A3238036D3000DC419 /* CameraController.swift */,
+				C72845A1238036C6000DC419 /* CameraController.xib */,
+			);
+			path = CameraController;
+			sourceTree = "<group>";
+		};
 		C738A691237C891D002A49E3 /* extensions */ = {
 			isa = PBXGroup;
 			children = (
@@ -169,6 +182,7 @@
 			children = (
 				C7CC222E2378511E00C71102 /* img */,
 				C7CC221F2378449400C71102 /* Controller */,
+				C72845A02380369E000DC419 /* CameraController */,
 				C7CC21F0237842B100C71102 /* FH Schadenmelder */,
 				C7CC2205237842B500C71102 /* FH SchadenmelderTests */,
 				C7CC2210237842B600C71102 /* FH SchadenmelderUITests */,
@@ -374,6 +388,7 @@
 				C738A697237E9827002A49E3 /* GoogleService-Info.plist in Resources */,
 				C738A695237CA20E002A49E3 /* campus.jpg in Resources */,
 				C7CC22302378513800C71102 /* FH-CAMPUS-WIEN.gif in Resources */,
+				C72845A2238036C6000DC419 /* CameraController.xib in Resources */,
 				C7CC21F9237842B500C71102 /* Assets.xcassets in Resources */,
 				C7CC2226237848B300C71102 /* HomeController.xib in Resources */,
 				C7CC222B23784A1700C71102 /* SchadenListeController.xib in Resources */,
@@ -513,6 +528,7 @@
 				C7CC22212378453A00C71102 /* LoginController.swift in Sources */,
 				C728459E23802848000DC419 /* SchadenMeldenController.swift in Sources */,
 				C7CC21F2237842B100C71102 /* AppDelegate.swift in Sources */,
+				C72845A4238036D3000DC419 /* CameraController.swift in Sources */,
 				C738A693237C8950002A49E3 /* extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
