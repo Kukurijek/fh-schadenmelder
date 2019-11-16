@@ -8,10 +8,12 @@
 
 import Foundation
 import UIKit
+import FirebaseAuth
 
 class HomeController: UIViewController {
 
-  override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
+
+    override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
       super.init(nibName: nil, bundle: nil)
   }
 
@@ -22,4 +24,12 @@ class HomeController: UIViewController {
   override var prefersStatusBarHidden: Bool {
       return true
   }
+    
+    @IBAction func LogoutButton(_ sender: Any) {
+        try! Auth.auth().signOut()
+        print("Logout successful")
+        let vc = LoginController()
+        vc.modalPresentationStyle = .fullScreen //or .overFullScreen for transparency
+        self.present(vc, animated: true, completion: nil)
+    }
 }

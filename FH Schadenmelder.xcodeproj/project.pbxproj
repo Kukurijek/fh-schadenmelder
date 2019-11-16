@@ -3,12 +3,14 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		2681E34B8E0806BA3CA667E4 /* Pods_FH_SchadenmelderTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 53FC7B1CA412C71DA78335C3 /* Pods_FH_SchadenmelderTests.framework */; };
 		2F09D869B0C5D27F75FACC2C /* Pods_FH_Schadenmelder_FH_SchadenmelderUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7A7BC8DE72772D5E912F6E8 /* Pods_FH_Schadenmelder_FH_SchadenmelderUITests.framework */; };
+		C728459C23802831000DC419 /* SchadenMeldenController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C728459B23802831000DC419 /* SchadenMeldenController.xib */; };
+		C728459E23802848000DC419 /* SchadenMeldenController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C728459D23802848000DC419 /* SchadenMeldenController.swift */; };
 		C738A693237C8950002A49E3 /* extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C738A692237C894F002A49E3 /* extensions.swift */; };
 		C738A695237CA20E002A49E3 /* campus.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C738A694237CA20D002A49E3 /* campus.jpg */; };
 		C738A697237E9827002A49E3 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C738A696237E9827002A49E3 /* GoogleService-Info.plist */; };
@@ -56,6 +58,8 @@
 		65EC9DD8A1DB12B5A0B01684 /* Pods-FH SchadenmelderTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FH SchadenmelderTests.release.xcconfig"; path = "Target Support Files/Pods-FH SchadenmelderTests/Pods-FH SchadenmelderTests.release.xcconfig"; sourceTree = "<group>"; };
 		A392E8106F60019FAD471544 /* Pods-FH SchadenmelderTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FH SchadenmelderTests.debug.xcconfig"; path = "Target Support Files/Pods-FH SchadenmelderTests/Pods-FH SchadenmelderTests.debug.xcconfig"; sourceTree = "<group>"; };
 		B4DA1903EE0C79B2B0731BB4 /* Pods-FH Schadenmelder.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FH Schadenmelder.release.xcconfig"; path = "Target Support Files/Pods-FH Schadenmelder/Pods-FH Schadenmelder.release.xcconfig"; sourceTree = "<group>"; };
+		C728459B23802831000DC419 /* SchadenMeldenController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SchadenMeldenController.xib; sourceTree = "<group>"; };
+		C728459D23802848000DC419 /* SchadenMeldenController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchadenMeldenController.swift; sourceTree = "<group>"; };
 		C738A692237C894F002A49E3 /* extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = extensions.swift; sourceTree = "<group>"; };
 		C738A694237CA20D002A49E3 /* campus.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = campus.jpg; sourceTree = "<group>"; };
 		C738A696237E9827002A49E3 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -131,8 +135,25 @@
 				A392E8106F60019FAD471544 /* Pods-FH SchadenmelderTests.debug.xcconfig */,
 				65EC9DD8A1DB12B5A0B01684 /* Pods-FH SchadenmelderTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		C728459A238027DE000DC419 /* SchadenMeldenController */ = {
+			isa = PBXGroup;
+			children = (
+				C728459D23802848000DC419 /* SchadenMeldenController.swift */,
+				C728459B23802831000DC419 /* SchadenMeldenController.xib */,
+			);
+			path = SchadenMeldenController;
+			sourceTree = "<group>";
+		};
+		C728459F238029E6000DC419 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				C7CC22202378453A00C71102 /* LoginController.swift */,
+				C7CC22222378454F00C71102 /* LoginController.xib */,
+			);
+			path = Login;
 			sourceTree = "<group>";
 		};
 		C738A691237C891D002A49E3 /* extensions */ = {
@@ -203,10 +224,10 @@
 		C7CC221F2378449400C71102 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				C7CC2229237849EF00C71102 /* SchadenListeController */,
+				C728459F238029E6000DC419 /* Login */,
 				C7CC22242378489400C71102 /* Home */,
-				C7CC22202378453A00C71102 /* LoginController.swift */,
-				C7CC22222378454F00C71102 /* LoginController.xib */,
+				C728459A238027DE000DC419 /* SchadenMeldenController */,
+				C7CC2229237849EF00C71102 /* SchadenListeController */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -223,8 +244,8 @@
 		C7CC2229237849EF00C71102 /* SchadenListeController */ = {
 			isa = PBXGroup;
 			children = (
-				C7CC222A23784A1700C71102 /* SchadenListeController.xib */,
 				C7CC222C23784A3F00C71102 /* SchadenListeController.swift */,
+				C7CC222A23784A1700C71102 /* SchadenListeController.xib */,
 			);
 			path = SchadenListeController;
 			sourceTree = "<group>";
@@ -348,6 +369,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C7CC21FC237842B500C71102 /* LaunchScreen.storyboard in Resources */,
+				C728459C23802831000DC419 /* SchadenMeldenController.xib in Resources */,
 				C7CC22232378454F00C71102 /* LoginController.xib in Resources */,
 				C738A697237E9827002A49E3 /* GoogleService-Info.plist in Resources */,
 				C738A695237CA20E002A49E3 /* campus.jpg in Resources */,
@@ -489,6 +511,7 @@
 				C7CC2228237848C700C71102 /* HomeController.swift in Sources */,
 				C7CC21F4237842B100C71102 /* ViewController.swift in Sources */,
 				C7CC22212378453A00C71102 /* LoginController.swift in Sources */,
+				C728459E23802848000DC419 /* SchadenMeldenController.swift in Sources */,
 				C7CC21F2237842B100C71102 /* AppDelegate.swift in Sources */,
 				C738A693237C8950002A49E3 /* extensions.swift in Sources */,
 			);

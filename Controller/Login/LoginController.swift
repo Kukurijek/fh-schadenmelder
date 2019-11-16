@@ -10,7 +10,6 @@ import Foundation
 import UIKit
 import FirebaseAuth
 
-
 class LoginController: UIViewController {
     
     @IBOutlet weak var usernameField: UITextField!
@@ -40,7 +39,7 @@ class LoginController: UIViewController {
                 print(err.localizedDescription)
                 return
             }
-        print("gecooo")
+        print("Login successful")
         let vc = HomeController()
         vc.modalPresentationStyle = .fullScreen //or .overFullScreen for transparency
         self.present(vc, animated: true, completion: nil)
