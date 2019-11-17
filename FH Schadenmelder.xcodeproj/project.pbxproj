@@ -19,6 +19,7 @@
 		C738A697237E9827002A49E3 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C738A696237E9827002A49E3 /* GoogleService-Info.plist */; };
 		C738A698237E9827002A49E3 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C738A696237E9827002A49E3 /* GoogleService-Info.plist */; };
 		C738A699237E9827002A49E3 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C738A696237E9827002A49E3 /* GoogleService-Info.plist */; };
+		C75C2A5C2381956000A3720D /* ProgressHUD.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C75C2A5B2381956000A3720D /* ProgressHUD.framework */; };
 		C7CC21F2237842B100C71102 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7CC21F1237842B100C71102 /* AppDelegate.swift */; };
 		C7CC21F4237842B100C71102 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7CC21F3237842B100C71102 /* ViewController.swift */; };
 		C7CC21F7237842B100C71102 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C7CC21F5237842B100C71102 /* Main.storyboard */; };
@@ -70,6 +71,7 @@
 		C738A692237C894F002A49E3 /* extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = extensions.swift; sourceTree = "<group>"; };
 		C738A694237CA20D002A49E3 /* campus.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = campus.jpg; sourceTree = "<group>"; };
 		C738A696237E9827002A49E3 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		C75C2A5B2381956000A3720D /* ProgressHUD.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = ProgressHUD.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C7CC21EE237842B100C71102 /* FH Schadenmelder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "FH Schadenmelder.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C7CC21F1237842B100C71102 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C7CC21F3237842B100C71102 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -99,6 +101,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C75C2A5C2381956000A3720D /* ProgressHUD.framework in Frameworks */,
 				C72845AF23806190000DC419 /* ExternalAccessory.framework in Frameworks */,
 				EF4EE25604E97FA447B2DE15 /* Pods_FH_Schadenmelder.framework in Frameworks */,
 			);
@@ -126,6 +129,7 @@
 		60EDFFD2A5C4D6CCE8C9320D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				C75C2A5B2381956000A3720D /* ProgressHUD.framework */,
 				C72845AE23806190000DC419 /* ExternalAccessory.framework */,
 				26502B4B308BE53487099F10 /* Pods_FH_Schadenmelder.framework */,
 				D7A7BC8DE72772D5E912F6E8 /* Pods_FH_Schadenmelder_FH_SchadenmelderUITests.framework */,

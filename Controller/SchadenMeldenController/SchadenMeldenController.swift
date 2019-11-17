@@ -11,6 +11,7 @@ import UIKit
 
 class SchadenMeldenController : UIViewController {
     
+
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
         super.init(nibName: nil, bundle: nil)
     }
@@ -21,5 +22,11 @@ class SchadenMeldenController : UIViewController {
     
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+    @IBAction func addPhotoButton(_ sender: Any) {
+        print("test")
+    }
+    @IBAction func sendButton(_ sender: Any) {
+        print("senddd")
     }
 }
