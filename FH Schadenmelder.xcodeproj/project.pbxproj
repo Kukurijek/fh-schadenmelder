@@ -20,6 +20,8 @@
 		C738A698237E9827002A49E3 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C738A696237E9827002A49E3 /* GoogleService-Info.plist */; };
 		C738A699237E9827002A49E3 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C738A696237E9827002A49E3 /* GoogleService-Info.plist */; };
 		C75C2A5C2381956000A3720D /* ProgressHUD.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C75C2A5B2381956000A3720D /* ProgressHUD.framework */; };
+		C75C2A612381AC1000A3720D /* SchadenEintragController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C75C2A602381AC1000A3720D /* SchadenEintragController.swift */; };
+		C75C2A632381AC2100A3720D /* SchadenEintragController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C75C2A622381AC2100A3720D /* SchadenEintragController.xib */; };
 		C7CC21F2237842B100C71102 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7CC21F1237842B100C71102 /* AppDelegate.swift */; };
 		C7CC21F4237842B100C71102 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7CC21F3237842B100C71102 /* ViewController.swift */; };
 		C7CC21F7237842B100C71102 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C7CC21F5237842B100C71102 /* Main.storyboard */; };
@@ -72,6 +74,8 @@
 		C738A694237CA20D002A49E3 /* campus.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = campus.jpg; sourceTree = "<group>"; };
 		C738A696237E9827002A49E3 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		C75C2A5B2381956000A3720D /* ProgressHUD.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = ProgressHUD.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C75C2A602381AC1000A3720D /* SchadenEintragController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchadenEintragController.swift; sourceTree = "<group>"; };
+		C75C2A622381AC2100A3720D /* SchadenEintragController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SchadenEintragController.xib; sourceTree = "<group>"; };
 		C7CC21EE237842B100C71102 /* FH Schadenmelder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "FH Schadenmelder.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C7CC21F1237842B100C71102 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C7CC21F3237842B100C71102 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -151,13 +155,13 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
-		C728459A238027DE000DC419 /* SchadenMeldenController */ = {
+		C728459A238027DE000DC419 /* SchadenMelden */ = {
 			isa = PBXGroup;
 			children = (
 				C728459D23802848000DC419 /* SchadenMeldenController.swift */,
 				C728459B23802831000DC419 /* SchadenMeldenController.xib */,
 			);
-			path = SchadenMeldenController;
+			path = SchadenMelden;
 			sourceTree = "<group>";
 		};
 		C728459F238029E6000DC419 /* Login */ = {
@@ -184,6 +188,15 @@
 				C738A692237C894F002A49E3 /* extensions.swift */,
 			);
 			path = extensions;
+			sourceTree = "<group>";
+		};
+		C75C2A5F2381ABC700A3720D /* SchadenEintrag */ = {
+			isa = PBXGroup;
+			children = (
+				C75C2A602381AC1000A3720D /* SchadenEintragController.swift */,
+				C75C2A622381AC2100A3720D /* SchadenEintragController.xib */,
+			);
+			path = SchadenEintrag;
 			sourceTree = "<group>";
 		};
 		C7CC21E5237842B100C71102 = {
@@ -250,8 +263,9 @@
 			children = (
 				C728459F238029E6000DC419 /* Login */,
 				C7CC22242378489400C71102 /* Home */,
-				C728459A238027DE000DC419 /* SchadenMeldenController */,
-				C7CC2229237849EF00C71102 /* SchadenListeController */,
+				C75C2A5F2381ABC700A3720D /* SchadenEintrag */,
+				C728459A238027DE000DC419 /* SchadenMelden */,
+				C7CC2229237849EF00C71102 /* SchadenListe */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -265,13 +279,13 @@
 			path = Home;
 			sourceTree = "<group>";
 		};
-		C7CC2229237849EF00C71102 /* SchadenListeController */ = {
+		C7CC2229237849EF00C71102 /* SchadenListe */ = {
 			isa = PBXGroup;
 			children = (
 				C7CC222C23784A3F00C71102 /* SchadenListeController.swift */,
 				C7CC222A23784A1700C71102 /* SchadenListeController.xib */,
 			);
-			path = SchadenListeController;
+			path = SchadenListe;
 			sourceTree = "<group>";
 		};
 		C7CC222E2378511E00C71102 /* img */ = {
@@ -397,6 +411,7 @@
 				C7CC22232378454F00C71102 /* LoginController.xib in Resources */,
 				C738A697237E9827002A49E3 /* GoogleService-Info.plist in Resources */,
 				C738A695237CA20E002A49E3 /* campus.jpg in Resources */,
+				C75C2A632381AC2100A3720D /* SchadenEintragController.xib in Resources */,
 				C7CC22302378513800C71102 /* FH-CAMPUS-WIEN.gif in Resources */,
 				C72845A2238036C6000DC419 /* CameraController.xib in Resources */,
 				C7CC21F9237842B500C71102 /* Assets.xcassets in Resources */,
@@ -537,6 +552,7 @@
 				C7CC21F4237842B100C71102 /* ViewController.swift in Sources */,
 				C7CC22212378453A00C71102 /* LoginController.swift in Sources */,
 				C728459E23802848000DC419 /* SchadenMeldenController.swift in Sources */,
+				C75C2A612381AC1000A3720D /* SchadenEintragController.swift in Sources */,
 				C7CC21F2237842B100C71102 /* AppDelegate.swift in Sources */,
 				C72845A4238036D3000DC419 /* CameraController.swift in Sources */,
 				C738A693237C8950002A49E3 /* extensions.swift in Sources */,
