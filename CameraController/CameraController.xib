@@ -3,13 +3,15 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15509"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CameraController" customModule="FH_Schadenmelder" customModuleProvider="target">
             <connections>
+                <outlet property="fotoSpeichern" destination="j6s-Cd-Lh0" id="RZq-GU-bbr"/>
+                <outlet property="photoPreview" destination="Lbi-Fk-E4n" id="jcV-Gd-38f"/>
                 <outlet property="view" destination="iN0-l3-epB" id="KnR-cx-IJM"/>
             </connections>
         </placeholder>
@@ -44,11 +46,14 @@
                     <rect key="frame" x="8" y="801" width="70" height="30"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <state key="normal" title="Speichern"/>
+                    <connections>
+                        <action selector="savePhoto:" destination="-1" eventType="touchUpInside" id="gGx-xu-wRn"/>
+                    </connections>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tye-ue-sBe">
-                    <rect key="frame" x="195" y="805" width="24" height="22"/>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tye-ue-sBe">
+                    <rect key="frame" x="151" y="801" width="112" height="30"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <state key="normal" image="camera.fill" catalog="system"/>
+                    <state key="normal" title="Foto aufnehmen"/>
                     <connections>
                         <action selector="cameraButtonPressed:" destination="-1" eventType="touchDown" id="DCu-GQ-1vg"/>
                     </connections>
@@ -60,7 +65,6 @@
         </view>
     </objects>
     <resources>
-        <image name="camera.fill" catalog="system" width="64" height="48"/>
         <image name="camera.rotate" catalog="system" width="64" height="48"/>
     </resources>
 </document>

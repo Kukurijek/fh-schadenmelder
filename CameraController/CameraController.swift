@@ -9,8 +9,13 @@
 import Foundation
 import UIKit
 import AVFoundation
+import Photos
+import ProgressHUD
 
-class CameraController : UIViewController {
+class CameraController : UIViewController, AVCapturePhotoCaptureDelegate {
+    
+    @IBOutlet weak var photoPreview: UIImageView!
+    @IBOutlet weak var fotoSpeichern: UIButton!
     
     var captureSession = AVCaptureSession()
     var photoOutput = AVCapturePhotoOutput()
@@ -102,12 +107,46 @@ class CameraController : UIViewController {
         return nil
     }
     
+    func takePhoto() {
+        let settings = AVCapturePhotoSettings()
+        guard let previewFormatType = settings.availablePreviewPhotoPixelFormatTypes.first else { return }
+        settings.previewPhotoFormat = [kCVPixelBufferPixelFormatTypeKey as String: previewFormatType]
+        photoOutput.capturePhoto(with: settings, delegate: self)
+    }
+    
+    func photoOutput(_ output: AVCapturePhotoOutput, didFinishProcessingPhoto photo: AVCapturePhoto, error: Error?) {
+        if let imageData = photo.fileDataRepresentation() {
+            photoPreview.image = UIImage(data: imageData)
+        }
+    }
+    
+    func savePhoto() {
+        let library = PHPhotoLibrary.shared()
+        guard let image = photoPreview.image else { return }
+        
+        library.performChanges({
+            PHAssetChangeRequest.creationRequestForAsset(from: image)
+        }) { (success, error) in
+            if error != nil {
+                ProgressHUD.showError(error?.localizedDescription)
+                return
+            } else {
+                ProgressHUD.showSuccess("Foto gespeichert")
+            }
+        }
+    }
+    
     @IBAction func cameraButtonPressed(_ sender: Any) {
         print("testttttt")
+        takePhoto()
+        print("ja")
     }
     @IBAction func switchCameraButtonPressed(_ sender: Any) {
         print("buumbumbumbula")
         switchCamera()
         print("jaaaaaa")
+    }
+    @IBAction func savePhoto(_ sender: Any) {
+        savePhoto()
     }
 }
