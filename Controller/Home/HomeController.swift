@@ -36,4 +36,15 @@ class HomeController: UIViewController {
         vc.modalPresentationStyle = .fullScreen //or .overFullScreen for transparency
         self.present(vc, animated: true, completion: nil)
     }
+    
+    @IBAction func schadenMeldenButtonPressed(_ sender: Any) {
+        let vc = SchadenMeldenController()
+        vc.modalPresentationStyle = .fullScreen //or .overFullScreen for transparency
+        self.present(vc, animated: true, completion: nil)
+    }
+    @IBAction func schadenListeButtonPressed(_ sender: Any) {
+        let vc = SchadenListeController()
+               vc.modalPresentationStyle = .fullScreen //or .overFullScreen for transparency
+               self.present(vc, animated: true, completion: nil)
+    }
 }

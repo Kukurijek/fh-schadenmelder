@@ -74,6 +74,7 @@
                     </state>
                     <connections>
                         <action selector="addPhotoButton:" destination="-1" eventType="touchUpInside" id="sAf-Xn-Bm0"/>
+                        <action selector="addPhotoButtonPressed:" destination="-1" eventType="touchUpInside" id="pwN-iF-MzA"/>
                     </connections>
                 </button>
             </subviews>

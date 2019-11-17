@@ -61,4 +61,11 @@ class SchadenMeldenController : UIViewController {
         addTargetToTheTextField()
         sendButton.isHidden = true
     }
+    
+    @IBAction func addPhotoButtonPressed(_ sender: Any) {
+        print("test")
+        let vc = CameraController()
+        vc.modalPresentationStyle = .fullScreen //or .overFullScreen for transparency
+        self.present(vc, animated: true, completion: nil)
+    }
 }

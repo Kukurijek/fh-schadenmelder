@@ -3,7 +3,7 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15509"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -24,6 +24,9 @@
                     <state key="normal" title="Schaden anzeigen">
                         <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </state>
+                    <connections>
+                        <action selector="schadenListeButtonPressed:" destination="-1" eventType="touchUpInside" id="Ybz-5u-drD"/>
+                    </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EPY-vG-19l">
                     <rect key="frame" x="150" y="222" width="115" height="46"/>
@@ -31,6 +34,9 @@
                     <state key="normal" title="Schaden melden">
                         <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </state>
+                    <connections>
+                        <action selector="schadenMeldenButtonPressed:" destination="-1" eventType="touchUpInside" id="Qrw-N6-3kk"/>
+                    </connections>
                 </button>
                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="campus.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="3zf-Ch-oic" customClass="home">
                     <rect key="frame" x="20" y="397" width="374" height="271"/>

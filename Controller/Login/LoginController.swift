@@ -43,7 +43,8 @@ class LoginController: UIViewController {
 //                return
 //            }
         print("Login successful")
-        let vc = SchadenMeldenController()
+
+        let vc = HomeController()
         vc.modalPresentationStyle = .fullScreen //or .overFullScreen for transparency
         self.present(vc, animated: true, completion: nil)
   //      }
