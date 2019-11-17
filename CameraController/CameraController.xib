@@ -10,6 +10,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CameraController" customModule="FH_Schadenmelder" customModuleProvider="target">
             <connections>
+                <outlet property="fotoAufnehmen" destination="tye-ue-sBe" id="1Lg-Gl-cTD"/>
                 <outlet property="fotoSpeichern" destination="j6s-Cd-Lh0" id="RZq-GU-bbr"/>
                 <outlet property="photoPreview" destination="Lbi-Fk-E4n" id="jcV-Gd-38f"/>
                 <outlet property="view" destination="iN0-l3-epB" id="KnR-cx-IJM"/>

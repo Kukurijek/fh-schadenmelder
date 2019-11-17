@@ -16,6 +16,7 @@ class CameraController : UIViewController, AVCapturePhotoCaptureDelegate {
     
     @IBOutlet weak var photoPreview: UIImageView!
     @IBOutlet weak var fotoSpeichern: UIButton!
+    @IBOutlet weak var fotoAufnehmen: UIButton!
     
     var captureSession = AVCaptureSession()
     var photoOutput = AVCapturePhotoOutput()
@@ -90,7 +91,7 @@ class CameraController : UIViewController, AVCapturePhotoCaptureDelegate {
             deviceInput = try AVCaptureDeviceInput(device: device)
             
         } catch let error {
-           // ProgressHUD.show(error.localizedDescription)
+            ProgressHUD.show(error.localizedDescription)
         }
         
         captureSession.removeInput(input)
@@ -140,6 +141,7 @@ class CameraController : UIViewController, AVCapturePhotoCaptureDelegate {
         print("testttttt")
         takePhoto()
         print("ja")
+        fotoAufnehmen.isHidden = true
     }
     @IBAction func switchCameraButtonPressed(_ sender: Any) {
         print("buumbumbumbula")
