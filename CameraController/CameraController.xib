@@ -32,10 +32,13 @@
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <state key="normal" title="Nutzen"/>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZTv-VK-wVQ">
-                    <rect key="frame" x="359" y="805" width="24" height="22"/>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZTv-VK-wVQ">
+                    <rect key="frame" x="334" y="805" width="75" height="23"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <state key="normal" image="camera.rotate" catalog="system"/>
+                    <state key="normal" title="switch" image="camera.rotate" catalog="system"/>
+                    <connections>
+                        <action selector="switchCameraButtonPressed:" destination="-1" eventType="touchDown" id="3r9-hq-c3S"/>
+                    </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j6s-Cd-Lh0">
                     <rect key="frame" x="8" y="801" width="70" height="30"/>
@@ -45,7 +48,7 @@
                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tye-ue-sBe">
                     <rect key="frame" x="195" y="805" width="24" height="22"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <state key="normal" image="camera" catalog="system"/>
+                    <state key="normal" image="camera.fill" catalog="system"/>
                     <connections>
                         <action selector="cameraButtonPressed:" destination="-1" eventType="touchDown" id="DCu-GQ-1vg"/>
                     </connections>
@@ -57,7 +60,7 @@
         </view>
     </objects>
     <resources>
-        <image name="camera" catalog="system" width="64" height="48"/>
+        <image name="camera.fill" catalog="system" width="64" height="48"/>
         <image name="camera.rotate" catalog="system" width="64" height="48"/>
     </resources>
 </document>

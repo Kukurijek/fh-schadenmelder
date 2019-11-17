@@ -64,7 +64,50 @@ class CameraController : UIViewController {
         captureSession.startRunning()
     }
     
+    func switchCamera() {
+        guard let input = captureSession.inputs[0] as? AVCaptureDeviceInput else { return }
+        
+        captureSession.beginConfiguration()
+        defer { captureSession.commitConfiguration() }
+        
+        var newDevice: AVCaptureDevice?
+        
+        if input.device.position == .back {
+            newDevice = whichCameraIsInUse(with: .front)
+        } else {
+            newDevice = whichCameraIsInUse(with: .back)
+        }
+        
+        var deviceInput: AVCaptureDeviceInput!
+        
+        do {
+            guard let device = newDevice else { return }
+            deviceInput = try AVCaptureDeviceInput(device: device)
+            
+        } catch let error {
+           // ProgressHUD.show(error.localizedDescription)
+        }
+        
+        captureSession.removeInput(input)
+        captureSession.addInput(deviceInput)
+    }
+    
+    func whichCameraIsInUse(with position: AVCaptureDevice.Position) -> AVCaptureDevice? {
+        let device = AVCaptureDevice.DiscoverySession(deviceTypes: [.builtInDualCamera, .builtInTelephotoCamera, .builtInWideAngleCamera], mediaType: .video, position: .unspecified).devices
+        for device in device {
+            if device.position == position {
+                return device
+            }
+        }
+        return nil
+    }
+    
     @IBAction func cameraButtonPressed(_ sender: Any) {
         print("testttttt")
+    }
+    @IBAction func switchCameraButtonPressed(_ sender: Any) {
+        print("buumbumbumbula")
+        switchCamera()
+        print("jaaaaaa")
     }
 }
