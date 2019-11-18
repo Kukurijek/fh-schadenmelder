@@ -15,6 +15,11 @@ class SchadenMeldenController : UIViewController {
     @IBOutlet weak var schadenArt: UITextField!
     @IBOutlet weak var schadenOrt: UITextField!
     @IBOutlet weak var sendButton: UIButton!
+    
+    // MARK: - Dismiss Keyboard
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        view.endEditing(true)
+    }
 
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
         super.init(nibName: nil, bundle: nil)
@@ -60,6 +65,8 @@ class SchadenMeldenController : UIViewController {
     override func viewDidLoad() {
         addTargetToTheTextField()
         sendButton.isHidden = true
+        schadenOrt.delegate = self
+        schadenArt.delegate = self
     }
     
     @IBAction func addPhotoButtonPressed(_ sender: Any) {
