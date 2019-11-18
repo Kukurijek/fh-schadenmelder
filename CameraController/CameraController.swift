@@ -17,12 +17,17 @@ class CameraController : UIViewController, AVCapturePhotoCaptureDelegate {
     @IBOutlet weak var photoPreview: UIImageView!
     @IBOutlet weak var fotoSpeichern: UIButton!
     @IBOutlet weak var fotoAufnehmen: UIButton!
+    @IBOutlet weak var fotoLoeschen: UIButton!
+    @IBOutlet weak var fotoHinzufuegen: UIButton!
     
     var captureSession = AVCaptureSession()
     var photoOutput = AVCapturePhotoOutput()
     
     override func viewDidLoad() {
         setupCaptureSession()
+        fotoLoeschen.isHidden = false
+        fotoSpeichern.isHidden = true
+        fotoHinzufuegen.isHidden = true
     }
     
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
@@ -142,6 +147,10 @@ class CameraController : UIViewController, AVCapturePhotoCaptureDelegate {
         takePhoto()
         print("ja")
         fotoAufnehmen.isHidden = true
+        fotoLoeschen.isHidden = false
+        fotoSpeichern.isHidden = false
+        fotoHinzufuegen.isHidden = false
+
     }
     @IBAction func switchCameraButtonPressed(_ sender: Any) {
         print("buumbumbumbula")
@@ -150,5 +159,23 @@ class CameraController : UIViewController, AVCapturePhotoCaptureDelegate {
     }
     @IBAction func savePhoto(_ sender: Any) {
         savePhoto()
+        fotoSpeichern.isHidden = true
+        fotoHinzufuegen.isHidden = true
+
+    }
+    @IBAction func cancelButtonPressed(_ sender: Any) {
+        cancel()
+        fotoAufnehmen.isHidden = false
+        fotoSpeichern.isHidden = true
+        fotoHinzufuegen.isHidden = true
+        
+    }
+    
+    func cancel() {
+        if photoPreview.image == nil {
+            dismiss(animated: true, completion: nil)
+        } else {
+        photoPreview.image = nil
+        }
     }
 }
