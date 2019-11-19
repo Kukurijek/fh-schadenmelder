@@ -12,4 +12,3 @@ blocks:
           commands:
             - checkout
             - swift build -v
-            - swift test -v
