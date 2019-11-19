@@ -10,6 +10,12 @@ import XCTest
 @testable import FH_Schadenmelder
 
 class FH_SchadenmelderTests: XCTestCase {
+    
+    var a = 10, b = 5
+    
+    func testAdd() {
+        XCTAssertEqual(a + b, 15)
+    }
 
     override func setUp() {
         // Put setup code here. This method is called before the invocation of each test method in the class.
