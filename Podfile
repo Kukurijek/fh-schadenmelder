@@ -7,8 +7,10 @@ target 'FH Schadenmelder' do
 
 # add the Firebase pod for Google Analytics
 pod 'Firebase/Analytics'
+pod 'FirebaseCore'
 pod 'FirebaseAuth'
 pod 'Firebase/Database'
+pod 'FirebaseStorage'
 pod 'ProgressHUD'
 # add pods for any other desired Firebase products
 # https://firebase.google.com/docs/ios/setup#available-pods

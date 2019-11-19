@@ -9,6 +9,8 @@
 import Foundation
 import UIKit
 import FirebaseDatabase
+import FirebaseStorage
+import ProgressHUD
 
 class SchadenMeldenController : UIViewController {
 
@@ -34,14 +36,16 @@ class SchadenMeldenController : UIViewController {
     }
     
     func uploadNewDamageEntryToDatabase(image: String) {
-        let databaseRef = Database.database().reference().child("Einträge")
+        ProgressHUD.show("Laden...", interaction: false)
+        let imageId = NSUUID().uuidString
+        let storageRef = Storage.storage().reference().child("Einträge").child(imageId)
+        
+        
+        
+        //let databaseRef = Database.database().reference().child("Einträge")
         
     }
-    
-    @IBAction func addPhotoButton(_ sender: Any) {
-        //sendButton.isEnabled = false
-        print("test")
-    }
+
     @IBAction func sendButton(_ sender: Any) {
         print("senddd")
         uploadNewDamageEntryToDatabase(image: "lele")
@@ -69,10 +73,11 @@ class SchadenMeldenController : UIViewController {
         schadenArt.delegate = self
     }
     
-    @IBAction func addPhotoButtonPressed(_ sender: Any) {
-        print("test")
+    @IBAction func makePhotoButtonPressed(_ sender: Any) {
+        print("testjj")
         let vc = CameraController()
         vc.modalPresentationStyle = .fullScreen //or .overFullScreen for transparency
         self.present(vc, animated: true, completion: nil)
     }
+
 }

@@ -11,7 +11,6 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CameraController" customModule="FH_Schadenmelder" customModuleProvider="target">
             <connections>
                 <outlet property="fotoAufnehmen" destination="tye-ue-sBe" id="1Lg-Gl-cTD"/>
-                <outlet property="fotoHinzufuegen" destination="t94-Uc-0uv" id="TA6-hI-mrt"/>
                 <outlet property="fotoLoeschen" destination="EUz-OD-e5j" id="IQf-Xe-wdZ"/>
                 <outlet property="fotoSpeichern" destination="j6s-Cd-Lh0" id="RZq-GU-bbr"/>
                 <outlet property="photoPreview" destination="Lbi-Fk-E4n" id="jcV-Gd-38f"/>
@@ -58,11 +57,6 @@
                     <connections>
                         <action selector="cameraButtonPressed:" destination="-1" eventType="touchDown" id="DCu-GQ-1vg"/>
                     </connections>
-                </button>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t94-Uc-0uv">
-                    <rect key="frame" x="20" y="54" width="79" height="30"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <state key="normal" title="Hinzufügen"/>
                 </button>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

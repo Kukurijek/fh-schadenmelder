@@ -204,7 +204,6 @@
 			children = (
 				C7CC222E2378511E00C71102 /* img */,
 				C7CC221F2378449400C71102 /* Controller */,
-				C72845A02380369E000DC419 /* CameraController */,
 				C7CC21F0237842B100C71102 /* FH Schadenmelder */,
 				C7CC2205237842B500C71102 /* FH SchadenmelderTests */,
 				C7CC2210237842B600C71102 /* FH SchadenmelderUITests */,
@@ -265,6 +264,7 @@
 				C7CC22242378489400C71102 /* Home */,
 				C75C2A5F2381ABC700A3720D /* SchadenEintrag */,
 				C728459A238027DE000DC419 /* SchadenMelden */,
+				C72845A02380369E000DC419 /* CameraController */,
 				C7CC2229237849EF00C71102 /* SchadenListe */,
 			);
 			path = Controller;

@@ -18,8 +18,7 @@ class CameraController : UIViewController, AVCapturePhotoCaptureDelegate {
     @IBOutlet weak var fotoSpeichern: UIButton!
     @IBOutlet weak var fotoAufnehmen: UIButton!
     @IBOutlet weak var fotoLoeschen: UIButton!
-    @IBOutlet weak var fotoHinzufuegen: UIButton!
-    
+
     var captureSession = AVCaptureSession()
     var photoOutput = AVCapturePhotoOutput()
     
@@ -27,7 +26,6 @@ class CameraController : UIViewController, AVCapturePhotoCaptureDelegate {
         setupCaptureSession()
         fotoLoeschen.isHidden = false
         fotoSpeichern.isHidden = true
-        fotoHinzufuegen.isHidden = true
     }
     
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
@@ -56,7 +54,7 @@ class CameraController : UIViewController, AVCapturePhotoCaptureDelegate {
             }
             
         } catch let error {
-           // ProgressHUD.show(error.localizedDescription)
+            ProgressHUD.show(error.localizedDescription)
         }
         
         photoOutput.setPreparedPhotoSettingsArray([AVCapturePhotoSettings(format: [AVVideoCodecKey: AVVideoCodecType.jpeg])], completionHandler: nil)
@@ -145,29 +143,24 @@ class CameraController : UIViewController, AVCapturePhotoCaptureDelegate {
     @IBAction func cameraButtonPressed(_ sender: Any) {
         print("testttttt")
         takePhoto()
-        print("ja")
         fotoAufnehmen.isHidden = true
         fotoLoeschen.isHidden = false
         fotoSpeichern.isHidden = false
-        fotoHinzufuegen.isHidden = false
 
     }
     @IBAction func switchCameraButtonPressed(_ sender: Any) {
-        print("buumbumbumbula")
         switchCamera()
-        print("jaaaaaa")
     }
+    
     @IBAction func savePhoto(_ sender: Any) {
         savePhoto()
         fotoSpeichern.isHidden = true
-        fotoHinzufuegen.isHidden = true
 
     }
     @IBAction func cancelButtonPressed(_ sender: Any) {
         cancel()
         fotoAufnehmen.isHidden = false
         fotoSpeichern.isHidden = true
-        fotoHinzufuegen.isHidden = true
         
     }
     
