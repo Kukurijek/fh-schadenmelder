@@ -19,6 +19,10 @@ class SchadenMeldenController : UIViewController, UIImagePickerControllerDelegat
     @IBOutlet weak var sendButton: UIButton!
     @IBOutlet weak var schadenFotoImage: UIImageView!
     
+    // MARK: - var / let
+    
+    var selectedImage: UIImage?
+    
     // MARK: - Dismiss Keyboard
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         view.endEditing(true)
@@ -80,8 +84,10 @@ class SchadenMeldenController : UIViewController, UIImagePickerControllerDelegat
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         if let editedPhoto = info[.cropRect] as? UIImage {
             schadenFotoImage.image = editedPhoto
+            selectedImage = editedPhoto
         } else if let originalImage = info[.originalImage] as? UIImage {
             schadenFotoImage.image = originalImage
+            selectedImage = originalImage
         }
         dismiss(animated: true, completion: nil)
     }
