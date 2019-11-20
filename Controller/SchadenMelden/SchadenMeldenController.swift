@@ -12,11 +12,12 @@ import FirebaseDatabase
 import FirebaseStorage
 import ProgressHUD
 
-class SchadenMeldenController : UIViewController {
+class SchadenMeldenController : UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
     @IBOutlet weak var schadenArt: UITextField!
     @IBOutlet weak var schadenOrt: UITextField!
     @IBOutlet weak var sendButton: UIButton!
+    @IBOutlet weak var schadenFotoImage: UIImageView!
     
     // MARK: - Dismiss Keyboard
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -59,6 +60,32 @@ class SchadenMeldenController : UIViewController {
         schadenOrt.addTarget(self, action: #selector(textFieldDidChange), for: UIControl.Event.editingChanged)
     }
     
+    
+    // MARK: - Choose photo
+    
+    func addPhotoForSchaden() {
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(handleSelectPhoto))
+        schadenFotoImage.addGestureRecognizer(tapGesture)
+        schadenFotoImage.isUserInteractionEnabled = true
+    }
+    
+    @objc func handleSelectPhoto() {
+        let pickerController = UIImagePickerController()
+        pickerController.delegate = self
+        pickerController.allowsEditing = true
+        present(pickerController, animated: true, completion: nil)
+        print("lalalalalal")
+    }
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        if let editedPhoto = info[.cropRect] as? UIImage {
+            schadenFotoImage.image = editedPhoto
+        } else if let originalImage = info[.originalImage] as? UIImage {
+            schadenFotoImage.image = originalImage
+        }
+        dismiss(animated: true, completion: nil)
+    }
+    
     @objc func textFieldDidChange(){
         let isText = schadenArt.text?.count ?? 0 > 0 && schadenOrt.text?.count ?? 0 > 0
         
@@ -74,6 +101,7 @@ class SchadenMeldenController : UIViewController {
         sendButton.isHidden = true
         schadenOrt.delegate = self
         schadenArt.delegate = self
+        addPhotoForSchaden()
     }
     
     @IBAction func makePhotoButtonPressed(_ sender: Any) {
