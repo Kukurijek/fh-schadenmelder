@@ -50,6 +50,9 @@ class SchadenMeldenController : UIViewController {
         print("senddd")
         uploadNewDamageEntryToDatabase(image: "lele")
     }
+    @IBAction func backButton(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
+    }
     
     func addTargetToTheTextField() {
         schadenArt.addTarget(self, action: #selector(textFieldDidChange), for: UIControl.Event.editingChanged)
@@ -79,5 +82,6 @@ class SchadenMeldenController : UIViewController {
         vc.modalPresentationStyle = .fullScreen //or .overFullScreen for transparency
         self.present(vc, animated: true, completion: nil)
     }
+    
 
 }
