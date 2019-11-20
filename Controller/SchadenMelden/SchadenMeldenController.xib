@@ -10,6 +10,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SchadenMeldenController" customModule="FH_Schadenmelder" customModuleProvider="target">
             <connections>
+                <outlet property="fotoloeschenButtton" destination="MDv-4N-Exb" id="aN1-3T-0IJ"/>
                 <outlet property="schadenArt" destination="GfU-30-YEM" id="MHH-8U-u5y"/>
                 <outlet property="schadenFotoImage" destination="Ky9-Nc-esn" id="ywN-ia-40e"/>
                 <outlet property="schadenOrt" destination="Cec-9U-T6n" id="HIL-Ec-lht"/>
@@ -97,6 +98,16 @@
                     </state>
                     <connections>
                         <action selector="backButton:" destination="-1" eventType="touchUpInside" id="Aya-yC-3Iv"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MDv-4N-Exb">
+                    <rect key="frame" x="171" y="358" width="89" height="30"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <state key="normal" title="Foto löschen">
+                        <color key="titleColor" systemColor="secondarySystemBackgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="fotoLoeschenButtonPressed:" destination="-1" eventType="touchUpInside" id="Fy3-Xw-nie"/>
                     </connections>
                 </button>
             </subviews>

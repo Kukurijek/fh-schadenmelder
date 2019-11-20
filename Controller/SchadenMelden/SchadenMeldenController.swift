@@ -18,6 +18,7 @@ class SchadenMeldenController : UIViewController, UIImagePickerControllerDelegat
     @IBOutlet weak var schadenOrt: UITextField!
     @IBOutlet weak var sendButton: UIButton!
     @IBOutlet weak var schadenFotoImage: UIImageView!
+    @IBOutlet weak var fotoloeschenButtton: UIButton!
     
     // MARK: - var / let
     
@@ -71,6 +72,7 @@ class SchadenMeldenController : UIViewController, UIImagePickerControllerDelegat
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(handleSelectPhoto))
         schadenFotoImage.addGestureRecognizer(tapGesture)
         schadenFotoImage.isUserInteractionEnabled = true
+        let image = UIImage(named: "image.jpg")
     }
     
     @objc func handleSelectPhoto() {
@@ -117,5 +119,9 @@ class SchadenMeldenController : UIViewController, UIImagePickerControllerDelegat
         self.present(vc, animated: true, completion: nil)
     }
     
-
+    @IBAction func fotoLoeschenButtonPressed(_ sender: Any) {
+        let image = UIImage(named: "image.jpg")
+        schadenFotoImage.image = image
+    }
+    
 }
