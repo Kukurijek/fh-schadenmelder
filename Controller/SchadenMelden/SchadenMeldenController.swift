@@ -61,10 +61,7 @@ class SchadenMeldenController : UIViewController, UIImagePickerControllerDelegat
                     print(error?.localizedDescription)
                     return
                 }
-                
-               // let schadenArt = schadenArt ?? ""
-                //let schadenOrt = schadenOrt
-               // let schadenNotiz =
+
                 let imageDataUrlString = url?.absoluteString
                 print("ovje treba da dodje")
                 print(imageDataUrlString!)
@@ -86,7 +83,7 @@ class SchadenMeldenController : UIViewController, UIImagePickerControllerDelegat
         var schadenArtString: String
         var schadenNotizString: String
         
-        
+
         if schadenNotiz.text == nil {
             schadenNotiz.text = ""
         }
