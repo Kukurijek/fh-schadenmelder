@@ -13,6 +13,7 @@
                 <outlet property="fotoloeschenButtton" destination="MDv-4N-Exb" id="aN1-3T-0IJ"/>
                 <outlet property="schadenArt" destination="GfU-30-YEM" id="MHH-8U-u5y"/>
                 <outlet property="schadenFotoImage" destination="Ky9-Nc-esn" id="ywN-ia-40e"/>
+                <outlet property="schadenNotiz" destination="dfL-9Y-sFi" id="lbV-W4-mQU"/>
                 <outlet property="schadenOrt" destination="Cec-9U-T6n" id="HIL-Ec-lht"/>
                 <outlet property="sendButton" destination="G9p-Je-zn8" id="iBe-fb-758"/>
                 <outlet property="view" destination="iN0-l3-epB" id="r3l-lN-e3V"/>

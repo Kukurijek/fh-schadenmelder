@@ -19,6 +19,7 @@ class SchadenMeldenController : UIViewController, UIImagePickerControllerDelegat
     @IBOutlet weak var sendButton: UIButton!
     @IBOutlet weak var schadenFotoImage: UIImageView!
     @IBOutlet weak var fotoloeschenButtton: UIButton!
+    @IBOutlet weak var schadenNotiz: UITextView!
     
     // MARK: - var / let
     
@@ -41,11 +42,11 @@ class SchadenMeldenController : UIViewController, UIImagePickerControllerDelegat
         fatalError("init(coder:) has not been implemented")
     }
     
-    func uploadNewDamageEntryToDatabase(image: String) {
+    func uploadNewDamageEntryToDatabase() {
         ProgressHUD.show("Laden...", interaction: false)
         
         guard let image = selectedImage else { return }
-        guard let imageData = image.jpegData(compressionQuality: 0.7) else { return }
+        guard let imageData = image.jpegData(compressionQuality: 1.0) else { return }
         let imageId = NSUUID().uuidString
         let storageRef = Storage.storage().reference().child("Eintrag_Fotos").child(imageId)
         storageRef.putData(imageData, metadata: nil) { (metadata, error) in
@@ -61,6 +62,9 @@ class SchadenMeldenController : UIViewController, UIImagePickerControllerDelegat
                     return
                 }
                 
+               // let schadenArt = schadenArt ?? ""
+                //let schadenOrt = schadenOrt
+               // let schadenNotiz =
                 let imageDataUrlString = url?.absoluteString
                 print("ovje treba da dodje")
                 print(imageDataUrlString!)
@@ -78,7 +82,26 @@ class SchadenMeldenController : UIViewController, UIImagePickerControllerDelegat
     func uploadDataToDatabase(imageUrl: String, imageId: String){
         let databaseRef = Database.database().reference().child("Eintragae").child(imageId)
         
-        databaseRef.setValue(["Foto" : imageUrl]) { (error, ref) in
+        var schadenOrtString: String
+        var schadenArtString: String
+        var schadenNotizString: String
+        
+        
+        if schadenNotiz.text == nil {
+            schadenNotiz.text = ""
+        }
+        if schadenArt.text == nil {
+            schadenArt.text = ""
+        }
+        if schadenOrt.text == nil {
+            schadenOrt.text = ""
+        }
+        schadenNotizString = String(schadenNotiz.text!)
+        schadenArtString = String(schadenArt.text!)
+        schadenOrtString = String(schadenOrt.text!)
+        
+        
+        databaseRef.setValue(["Foto" : imageUrl, "Schadenart" : schadenArtString, "Schadenort" : schadenOrtString, "Notiz" : "schadenNotizString"]) { (error, ref) in
             if error != nil {
                 ProgressHUD.showError("Daten konnten nicht hochgeladen werden")
                 return
@@ -90,7 +113,7 @@ class SchadenMeldenController : UIViewController, UIImagePickerControllerDelegat
 
     @IBAction func sendButton(_ sender: Any) {
         print("senddd")
-        uploadNewDamageEntryToDatabase(image: "lele")
+        uploadNewDamageEntryToDatabase()
     }
     @IBAction func backButton(_ sender: Any) {
         dismiss(animated: true, completion: nil)
