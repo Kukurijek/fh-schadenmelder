@@ -62,28 +62,23 @@ class SchadenMeldenController : UIViewController, UIImagePickerControllerDelegat
                 }
                 
                 let imageDataUrlString = url?.absoluteString
+                print("ovje treba da dodje")
                 print(imageDataUrlString!)
-                self.uploadDataToDatabase(imageUrl: imageDataUrlString!)
+                self.uploadDataToDatabase(imageUrl: imageDataUrlString!, imageId: imageId)
                 print("odeeeeee")
                 
             }
-            //guard let imageUrl = (metadata?.downloadURL() as AnyObject).absoliteString else { return  }
-
         }
         
-        //let databaseRef = Database.database().reference().child("Einträge")
     }
     
     
     
     
-    func uploadDataToDatabase(imageUrl: String){
-        let databaseRef = Database.database().reference().child("Eintragae")
-        guard let neueEintragId = databaseRef.childByAutoId().key else { return }
+    func uploadDataToDatabase(imageUrl: String, imageId: String){
+        let databaseRef = Database.database().reference().child("Eintragae").child(imageId)
         
-        let neueEintragReferenz = databaseRef.child(neueEintragId)
-        
-        neueEintragReferenz.setValue(imageUrl) { (error, ref) in
+        databaseRef.setValue(["Foto" : imageUrl]) { (error, ref) in
             if error != nil {
                 ProgressHUD.showError("Daten konnten nicht hochgeladen werden")
                 return
