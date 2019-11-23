@@ -81,8 +81,9 @@ class SchadenMeldenController : UIViewController, UIImagePickerControllerDelegat
         
         var schadenOrtString: String
         var schadenArtString: String
-        var schadenNotizString: String
+        var schadenNotizString: String = ""
         
+        schadenNotizString = schadenNotiz.text!
 
         if schadenNotiz.text == nil {
             schadenNotiz.text = ""
@@ -98,7 +99,7 @@ class SchadenMeldenController : UIViewController, UIImagePickerControllerDelegat
         schadenOrtString = String(schadenOrt.text!)
         
         
-        databaseRef.setValue(["Foto" : imageUrl, "Schadenart" : schadenArtString, "Schadenort" : schadenOrtString, "Notiz" : "schadenNotizString"]) { (error, ref) in
+        databaseRef.setValue(["Foto" : imageUrl, "Schadenart" : schadenArtString, "Schadenort" : schadenOrtString, "Notiz" : schadenNotizString]) { (error, ref) in
             if error != nil {
                 ProgressHUD.showError("Daten konnten nicht hochgeladen werden")
                 return
