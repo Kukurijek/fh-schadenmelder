@@ -79,27 +79,27 @@ class SchadenMeldenController : UIViewController, UIImagePickerControllerDelegat
     func uploadDataToDatabase(imageUrl: String, imageId: String){
         let databaseRef = Database.database().reference().child("Eintragae").child(imageId)
         
-        var schadenOrtString: String
-        var schadenArtString: String
+        var schadenOrtString: String = ""
+        var schadenArtString: String = ""
         var schadenNotizString: String = ""
         
-        schadenNotizString = schadenNotiz.text!
-
-        if schadenNotiz.text == nil {
-            schadenNotiz.text = ""
-        }
-        if schadenArt.text == nil {
-            schadenArt.text = ""
-        }
-        if schadenOrt.text == nil {
-            schadenOrt.text = ""
-        }
+        
+        let date = Date()
+        let calendar = Calendar.current
+        let hour = calendar.component(.hour, from: date)
+        let minutes = calendar.component(.minute, from: date)
+        
+        let formatter = DateFormatter()
+        formatter.dateFormat = "dd.MM.yyyy"
+        let result = formatter.string(from: date)
+        
+        
         schadenNotizString = String(schadenNotiz.text!)
         schadenArtString = String(schadenArt.text!)
         schadenOrtString = String(schadenOrt.text!)
         
         
-        databaseRef.setValue(["Foto" : imageUrl, "Schadenart" : schadenArtString, "Schadenort" : schadenOrtString, "Notiz" : schadenNotizString]) { (error, ref) in
+        databaseRef.setValue(["Foto" : imageUrl, "Schadenart" : schadenArtString, "Schadenort" : schadenOrtString, "Notiz" : schadenNotizString, "Date": result, "Time": "\(hour):\(minutes)"]) { (error, ref) in
             if error != nil {
                 ProgressHUD.showError("Daten konnten nicht hochgeladen werden")
                 return
