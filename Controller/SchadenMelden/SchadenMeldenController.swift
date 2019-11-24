@@ -48,6 +48,7 @@ class SchadenMeldenController : UIViewController, UIImagePickerControllerDelegat
         guard let image = selectedImage else { return }
         guard let imageData = image.jpegData(compressionQuality: 1.0) else { return }
         let imageId = NSUUID().uuidString
+        
         let storageRef = Storage.storage().reference().child("Eintrag_Fotos").child(imageId)
         storageRef.putData(imageData, metadata: nil) { (metadata, error) in
             if error != nil {

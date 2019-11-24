@@ -8,9 +8,24 @@
 
 import Foundation
 import UIKit
+import FirebaseDatabase
 
 class SchadenListeController : UIViewController, UITableViewDataSource {
         
+    override func viewDidLoad() {
+        loadEintraege()
+    }
+    
+    func loadEintraege() {
+        let refDatabase = Database.database().reference().child("Eintragae")
+        
+        refDatabase.observe(.childAdded) { (snapshot) in
+            print(snapshot)
+        }
+        print(refDatabase)
+    }
+    
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 8
     }
