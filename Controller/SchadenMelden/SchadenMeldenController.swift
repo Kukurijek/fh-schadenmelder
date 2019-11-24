@@ -126,10 +126,11 @@ class SchadenMeldenController : UIViewController, UIImagePickerControllerDelegat
     // MARK: - Choose photo
     
     func addPhotoForSchaden() {
+        selectedImage = UIImage(named: "image.jpg")
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(handleSelectPhoto))
         schadenFotoImage.addGestureRecognizer(tapGesture)
         schadenFotoImage.isUserInteractionEnabled = true
-        let image = UIImage(named: "image.jpg")
+        
     }
     
     @objc func handleSelectPhoto() {

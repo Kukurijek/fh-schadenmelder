@@ -9,8 +9,22 @@
 import Foundation
 import UIKit
 
-class SchadenListeController : UIViewController {
+class SchadenListeController : UIViewController, UITableViewDataSource {
+        
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 8
+    }
     
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
+        
+        cell.textLabel?.text = "TESTTTTTTTtt"
+        
+        return cell
+    }
+    
+    
+    @IBOutlet weak var tableView: UITableView!
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
         super.init(nibName: nil, bundle: nil)
     }
