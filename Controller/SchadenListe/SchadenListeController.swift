@@ -15,7 +15,7 @@ class SchadenListeController : UIViewController, UITableViewDataSource {
     @IBOutlet weak var tableView: UITableView!
     
     override func viewDidLoad() {
-        self.tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
+        self.tableView.register(SchadenViewCell.self, forCellReuseIdentifier: "cell")
         loadEintraege()
         tableView.dataSource = self
 
@@ -36,9 +36,9 @@ class SchadenListeController : UIViewController, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! SchadenViewCell
         
-        cell.textLabel?.text = "TESTTTTTTTtt"
+        //cell.textLabel?.text = "TESTTTTTTTtt"
         
         return cell
     }
@@ -56,4 +56,9 @@ class SchadenListeController : UIViewController, UITableViewDataSource {
         fatalError("init(coder:) has not been implemented")
     }
     
+    @IBAction func backButtonPressed(_ sender: Any) {
+        let vc = HomeController()
+        vc.modalPresentationStyle = .fullScreen //or .overFullScreen for transparency
+        self.present(vc, animated: true, completion: nil)
+    }
 }
