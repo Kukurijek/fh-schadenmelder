@@ -12,8 +12,13 @@ import FirebaseDatabase
 
 class SchadenListeController : UIViewController, UITableViewDataSource {
         
+    @IBOutlet weak var tableView: UITableView!
+    
     override func viewDidLoad() {
+        self.tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
         loadEintraege()
+        tableView.dataSource = self
+
     }
     
     func loadEintraege() {
@@ -39,7 +44,6 @@ class SchadenListeController : UIViewController, UITableViewDataSource {
     }
     
     
-    @IBOutlet weak var tableView: UITableView!
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
         super.init(nibName: nil, bundle: nil)
     }
