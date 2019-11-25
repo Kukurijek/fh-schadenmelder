@@ -10,14 +10,20 @@ import Foundation
 import UIKit
 import FirebaseDatabase
 
-class SchadenListeController : UIViewController, UITableViewDataSource {
+class SchadenListeController : UIViewController, UITableViewDataSource, UITableViewDelegate {
         
     @IBOutlet weak var tableView: UITableView!
     
+    
+    // MARK - Array mit Eintraege
+    var eintraege = [EintragModel]()
+    
     override func viewDidLoad() {
         self.tableView.register(SchadenViewCell.self, forCellReuseIdentifier: "cell")
-        loadEintraege()
         tableView.dataSource = self
+        tableView.delegate = self
+
+        loadEintraege()
 
     }
     
@@ -25,20 +31,30 @@ class SchadenListeController : UIViewController, UITableViewDataSource {
         let refDatabase = Database.database().reference().child("Eintragae")
         
         refDatabase.observe(.childAdded) { (snapshot) in
-            print(snapshot)
+            guard let dic = snapshot.value as? [String: Any] else { return }
+            let newEintrag = EintragModel(dictionary: dic)
+            self.eintraege.append(newEintrag)
+            self.tableView.reloadData()
         }
         print(refDatabase)
     }
     
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 8
+        return eintraege.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! SchadenViewCell
         
         //cell.textLabel?.text = "TESTTTTTTTtt"
+        //cell.schadenImage
+        cell.textLabel?.text = eintraege[indexPath.row].schadenArt
+        cell.detailTextLabel?.text = "asdqsadaasdads"
+        cell.schadenNummer?.text = eintraege[indexPath.row].schadenArt
+        
+        var aa = eintraege[indexPath.row].schadenArt
+        print(eintraege[indexPath.row].schadenArt)
         
         return cell
     }

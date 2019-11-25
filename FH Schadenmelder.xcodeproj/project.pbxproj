@@ -10,6 +10,9 @@
 		2681E34B8E0806BA3CA667E4 /* Pods_FH_SchadenmelderTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 53FC7B1CA412C71DA78335C3 /* Pods_FH_SchadenmelderTests.framework */; };
 		2F09D869B0C5D27F75FACC2C /* Pods_FH_Schadenmelder_FH_SchadenmelderUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7A7BC8DE72772D5E912F6E8 /* Pods_FH_Schadenmelder_FH_SchadenmelderUITests.framework */; };
 		C705C1D7238A90B800B47E46 /* SchadenViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C705C1D6238A90B800B47E46 /* SchadenViewCell.swift */; };
+		C705C1DA238B462A00B47E46 /* EintragModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C705C1D9238B462A00B47E46 /* EintragModel.swift */; };
+		C705C1DD238BF23A00B47E46 /* testTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C705C1DB238BF23A00B47E46 /* testTableViewCell.swift */; };
+		C705C1DE238BF23A00B47E46 /* testTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C705C1DC238BF23A00B47E46 /* testTableViewCell.xib */; };
 		C718E4E9238557CA00DE8B57 /* image.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C718E4E8238557CA00DE8B57 /* image.jpg */; };
 		C728459C23802831000DC419 /* SchadenMeldenController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C728459B23802831000DC419 /* SchadenMeldenController.xib */; };
 		C728459E23802848000DC419 /* SchadenMeldenController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C728459D23802848000DC419 /* SchadenMeldenController.swift */; };
@@ -67,6 +70,9 @@
 		A392E8106F60019FAD471544 /* Pods-FH SchadenmelderTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FH SchadenmelderTests.debug.xcconfig"; path = "Target Support Files/Pods-FH SchadenmelderTests/Pods-FH SchadenmelderTests.debug.xcconfig"; sourceTree = "<group>"; };
 		B4DA1903EE0C79B2B0731BB4 /* Pods-FH Schadenmelder.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FH Schadenmelder.release.xcconfig"; path = "Target Support Files/Pods-FH Schadenmelder/Pods-FH Schadenmelder.release.xcconfig"; sourceTree = "<group>"; };
 		C705C1D6238A90B800B47E46 /* SchadenViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchadenViewCell.swift; sourceTree = "<group>"; };
+		C705C1D9238B462A00B47E46 /* EintragModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EintragModel.swift; sourceTree = "<group>"; };
+		C705C1DB238BF23A00B47E46 /* testTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = testTableViewCell.swift; sourceTree = "<group>"; };
+		C705C1DC238BF23A00B47E46 /* testTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = testTableViewCell.xib; sourceTree = "<group>"; };
 		C718E4E8238557CA00DE8B57 /* image.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = image.jpg; sourceTree = "<group>"; };
 		C728459B23802831000DC419 /* SchadenMeldenController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SchadenMeldenController.xib; sourceTree = "<group>"; };
 		C728459D23802848000DC419 /* SchadenMeldenController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchadenMeldenController.swift; sourceTree = "<group>"; };
@@ -159,6 +165,16 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		C705C1D8238B45FA00B47E46 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				C705C1D9238B462A00B47E46 /* EintragModel.swift */,
+				C705C1DB238BF23A00B47E46 /* testTableViewCell.swift */,
+				C705C1DC238BF23A00B47E46 /* testTableViewCell.xib */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		C728459A238027DE000DC419 /* SchadenMelden */ = {
 			isa = PBXGroup;
 			children = (
@@ -177,13 +193,13 @@
 			path = Login;
 			sourceTree = "<group>";
 		};
-		C72845A02380369E000DC419 /* CameraController */ = {
+		C72845A02380369E000DC419 /* Camera */ = {
 			isa = PBXGroup;
 			children = (
 				C72845A3238036D3000DC419 /* CameraController.swift */,
 				C72845A1238036C6000DC419 /* CameraController.xib */,
 			);
-			path = CameraController;
+			path = Camera;
 			sourceTree = "<group>";
 		};
 		C738A691237C891D002A49E3 /* extensions */ = {
@@ -206,6 +222,7 @@
 		C7CC21E5237842B100C71102 = {
 			isa = PBXGroup;
 			children = (
+				C705C1D8238B45FA00B47E46 /* Model */,
 				C7CC222E2378511E00C71102 /* img */,
 				C7CC221F2378449400C71102 /* Controller */,
 				C7CC21F0237842B100C71102 /* FH Schadenmelder */,
@@ -268,7 +285,7 @@
 				C7CC22242378489400C71102 /* Home */,
 				C75C2A5F2381ABC700A3720D /* SchadenEintrag */,
 				C728459A238027DE000DC419 /* SchadenMelden */,
-				C72845A02380369E000DC419 /* CameraController */,
+				C72845A02380369E000DC419 /* Camera */,
 				C7CC2229237849EF00C71102 /* SchadenListe */,
 			);
 			path = Controller;
@@ -415,6 +432,7 @@
 				C7CC21FC237842B500C71102 /* LaunchScreen.storyboard in Resources */,
 				C728459C23802831000DC419 /* SchadenMeldenController.xib in Resources */,
 				C7CC22232378454F00C71102 /* LoginController.xib in Resources */,
+				C705C1DE238BF23A00B47E46 /* testTableViewCell.xib in Resources */,
 				C738A697237E9827002A49E3 /* GoogleService-Info.plist in Resources */,
 				C738A695237CA20E002A49E3 /* campus.jpg in Resources */,
 				C75C2A632381AC2100A3720D /* SchadenEintragController.xib in Resources */,
@@ -555,11 +573,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				C7CC222D23784A3F00C71102 /* SchadenListeController.swift in Sources */,
+				C705C1DD238BF23A00B47E46 /* testTableViewCell.swift in Sources */,
 				C7CC2228237848C700C71102 /* HomeController.swift in Sources */,
 				C7CC21F4237842B100C71102 /* ViewController.swift in Sources */,
 				C7CC22212378453A00C71102 /* LoginController.swift in Sources */,
 				C728459E23802848000DC419 /* SchadenMeldenController.swift in Sources */,
 				C705C1D7238A90B800B47E46 /* SchadenViewCell.swift in Sources */,
+				C705C1DA238B462A00B47E46 /* EintragModel.swift in Sources */,
 				C75C2A612381AC1000A3720D /* SchadenEintragController.swift in Sources */,
 				C7CC21F2237842B100C71102 /* AppDelegate.swift in Sources */,
 				C72845A4238036D3000DC419 /* CameraController.swift in Sources */,

@@ -38,20 +38,20 @@ class LoginController: UIViewController {
     }
     
     @IBAction func loginButton(_ sender: Any) {
-        ProgressHUD.show("Laden...", interaction: false)
-        Auth.auth().signIn(withEmail: usernameField.text!, password: passwordField.text!) { (user, error) in
-            if let err = error {
-                print(err.localizedDescription)
-                ProgressHUD.showError("Falsche Daten!")
-                return
-            }
+//        ProgressHUD.show("Laden...", interaction: false)
+//        Auth.auth().signIn(withEmail: usernameField.text!, password: passwordField.text!) { (user, error) in
+//            if let err = error {
+//                print(err.localizedDescription)
+//                ProgressHUD.showError("Falsche Daten!")
+//                return
+//            }
         print("Login successful")
         ProgressHUD.showSuccess("Login erfolgreich")
 
         let vc = HomeController()
         vc.modalPresentationStyle = .fullScreen //or .overFullScreen for transparency
         self.present(vc, animated: true, completion: nil)
-        }
+       // }
     }
     func getWiFiSsid() -> String? {
     var ssid: String?
