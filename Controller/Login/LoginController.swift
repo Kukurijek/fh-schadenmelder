@@ -47,10 +47,15 @@ class LoginController: UIViewController {
 //            }
         print("Login successful")
         ProgressHUD.showSuccess("Login erfolgreich")
-
-        let vc = HomeController()
-        vc.modalPresentationStyle = .fullScreen //or .overFullScreen for transparency
+        
+        let storyboard = UIStoryboard(name: "SchadenListe", bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: "liste") as UIViewController
+        vc.modalPresentationStyle = .fullScreen
         self.present(vc, animated: true, completion: nil)
+
+//        let vc = HomeController()
+//        vc.modalPresentationStyle = .fullScreen //or .overFullScreen for transparency
+//        self.present(vc, animated: true, completion: nil)
        // }
     }
     func getWiFiSsid() -> String? {
