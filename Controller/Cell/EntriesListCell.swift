@@ -11,6 +11,10 @@ import UIKit
 class EntriesListCell: UITableViewCell {
     @IBOutlet weak var title: UILabel!
     @IBOutlet weak var date: UILabel!
+    @IBOutlet weak var time: UILabel!
+    @IBOutlet weak var category: UILabel!
+    @IBOutlet weak var icon: UIImageView!
+    
     /*
     override func awakeFromNib() {
         super.awakeFromNib()
