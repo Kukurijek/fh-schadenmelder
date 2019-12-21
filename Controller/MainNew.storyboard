@@ -177,6 +177,9 @@
                                 <state key="normal" title="Senden">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="sendButtonPressed:" destination="gmr-qD-CaW" eventType="touchUpInside" id="Ews-b2-4hC"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -211,6 +214,15 @@
                         <viewLayoutGuide key="safeArea" id="QQD-5W-Mvk"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Melden" id="XoD-bY-AiY"/>
+                    <connections>
+                        <outlet property="deleteImage" destination="bzP-TF-6av" id="YLG-Us-2yU"/>
+                        <outlet property="image" destination="ICe-K4-Ldo" id="nFm-to-ccg"/>
+                        <outlet property="note" destination="Jyg-It-cCj" id="Loe-Qh-5rZ"/>
+                        <outlet property="placeOfDamage" destination="VgP-pW-fKP" id="4Tg-Di-pDu"/>
+                        <outlet property="send" destination="LgK-UN-wQu" id="uoZ-0u-jeq"/>
+                        <outlet property="takeImage" destination="Hcc-gH-ymL" id="gEv-9Z-E3M"/>
+                        <outlet property="typeOfDamage" destination="xd4-7Z-asO" id="jS5-PY-KWt"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KWu-ED-g19" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -224,16 +236,23 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vU5-XC-zsQ" userLabel="Logout">
-                                <rect key="frame" x="152" y="158" width="46" height="124"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vU5-XC-zsQ" userLabel="Logout">
+                                <rect key="frame" x="50" y="300" width="314" height="30"/>
+                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Logout">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
                                 <connections>
                                     <action selector="logOutPressed:" destination="boG-VE-YsR" eventType="touchUpInside" id="ccp-aQ-kVy"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="vU5-XC-zsQ" firstAttribute="top" secondItem="zFS-Ja-9NM" secondAttribute="top" constant="300" id="Iy0-x0-vQy"/>
+                            <constraint firstItem="vU5-XC-zsQ" firstAttribute="leading" secondItem="zFS-Ja-9NM" secondAttribute="leading" constant="50" id="Zlh-gq-uEj"/>
+                            <constraint firstItem="zFS-Ja-9NM" firstAttribute="trailing" secondItem="vU5-XC-zsQ" secondAttribute="trailing" constant="50" id="wiv-y5-5y1"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="zFS-Ja-9NM"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Einstellungen" id="Zg4-qn-52W"/>

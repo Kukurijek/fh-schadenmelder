@@ -77,7 +77,7 @@ class SchadenMeldenController : UIViewController, UIImagePickerControllerDelegat
     
     
     
-    func uploadDataToDatabase(imageUrl: String, imageId: String){
+    func uploadDataToDatabase(imageUrl: String, imageId: String) {
         let databaseRef = Database.database().reference().child("Eintragae").child(imageId)
         
         var schadenOrtString: String = ""
