@@ -29,7 +29,8 @@
 		C75C2A632381AC2100A3720D /* SchadenEintragController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C75C2A622381AC2100A3720D /* SchadenEintragController.xib */; };
 		C76C3FAD238D5221003D443A /* SchadenListe.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C76C3FAC238D5221003D443A /* SchadenListe.storyboard */; };
 		C76C3FAF238D5658003D443A /* SchadenListeStoryBoardController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C76C3FAE238D5658003D443A /* SchadenListeStoryBoardController.swift */; };
-		C794D82A23AD1B38005CFD34 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C794D82923AD1B38005CFD34 /* Main.storyboard */; };
+		C794D82A23AD1B38005CFD34 /* MainNew.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C794D82923AD1B38005CFD34 /* MainNew.storyboard */; };
+		C794D82C23AE40AB005CFD34 /* SplashScreenController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C794D82B23AE40AB005CFD34 /* SplashScreenController.swift */; };
 		C7CC21F2237842B100C71102 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7CC21F1237842B100C71102 /* AppDelegate.swift */; };
 		C7CC21F4237842B100C71102 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7CC21F3237842B100C71102 /* ViewController.swift */; };
 		C7CC21F7237842B100C71102 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C7CC21F5237842B100C71102 /* Main.storyboard */; };
@@ -91,7 +92,8 @@
 		C75C2A622381AC2100A3720D /* SchadenEintragController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SchadenEintragController.xib; sourceTree = "<group>"; };
 		C76C3FAC238D5221003D443A /* SchadenListe.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SchadenListe.storyboard; sourceTree = "<group>"; };
 		C76C3FAE238D5658003D443A /* SchadenListeStoryBoardController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchadenListeStoryBoardController.swift; sourceTree = "<group>"; };
-		C794D82923AD1B38005CFD34 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		C794D82923AD1B38005CFD34 /* MainNew.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MainNew.storyboard; sourceTree = "<group>"; };
+		C794D82B23AE40AB005CFD34 /* SplashScreenController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreenController.swift; sourceTree = "<group>"; };
 		C7CC21EE237842B100C71102 /* FH Schadenmelder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "FH Schadenmelder.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C7CC21F1237842B100C71102 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C7CC21F3237842B100C71102 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -293,7 +295,8 @@
 				C728459A238027DE000DC419 /* SchadenMelden */,
 				C72845A02380369E000DC419 /* Camera */,
 				C7CC2229237849EF00C71102 /* SchadenListe */,
-				C794D82923AD1B38005CFD34 /* Main.storyboard */,
+				C794D82923AD1B38005CFD34 /* MainNew.storyboard */,
+				C794D82B23AE40AB005CFD34 /* SplashScreenController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -449,7 +452,7 @@
 				C7CC22302378513800C71102 /* FH-CAMPUS-WIEN.gif in Resources */,
 				C72845A2238036C6000DC419 /* CameraController.xib in Resources */,
 				C7CC21F9237842B500C71102 /* Assets.xcassets in Resources */,
-				C794D82A23AD1B38005CFD34 /* Main.storyboard in Resources */,
+				C794D82A23AD1B38005CFD34 /* MainNew.storyboard in Resources */,
 				C718E4E9238557CA00DE8B57 /* image.jpg in Resources */,
 				C7CC2226237848B300C71102 /* HomeController.xib in Resources */,
 				C7CC222B23784A1700C71102 /* SchadenListeController.xib in Resources */,
@@ -587,6 +590,7 @@
 				C7CC222D23784A3F00C71102 /* SchadenListeController.swift in Sources */,
 				C705C1DD238BF23A00B47E46 /* testTableViewCell.swift in Sources */,
 				C7CC2228237848C700C71102 /* HomeController.swift in Sources */,
+				C794D82C23AE40AB005CFD34 /* SplashScreenController.swift in Sources */,
 				C7CC21F4237842B100C71102 /* ViewController.swift in Sources */,
 				C7CC22212378453A00C71102 /* LoginController.swift in Sources */,
 				C728459E23802848000DC419 /* SchadenMeldenController.swift in Sources */,

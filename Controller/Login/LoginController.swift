@@ -17,14 +17,18 @@ class LoginController: UIViewController {
     @IBOutlet weak var usernameField: UITextField!
     @IBOutlet weak var passwordField: UITextField!
     
+    
+    @IBOutlet weak var newUsernmaeField: UITextField!
+    @IBOutlet weak var newPasswordField: UITextField!
+    
 
     override func viewDidLoad() {
-        usernameField.delegate = self
-        passwordField.delegate = self
+      //  usernameField.delegate = self
+        //passwordField.delegate = self
         var a = UIDevice.current.identifierForVendor?.uuidString
         print(getWiFiSsid())
     }
-    
+    /*
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
         super.init(nibName: nil, bundle: nil)
     }
@@ -32,11 +36,12 @@ class LoginController: UIViewController {
     override var prefersStatusBarHidden: Bool {
         return true
     }
-    
+ */
+    /*
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-    
+    */
     @IBAction func loginButton(_ sender: Any) {
 //        ProgressHUD.show("Laden...", interaction: false)
 //        Auth.auth().signIn(withEmail: usernameField.text!, password: passwordField.text!) { (user, error) in
@@ -58,6 +63,11 @@ class LoginController: UIViewController {
 //        self.present(vc, animated: true, completion: nil)
        // }
     }
+    
+    @IBAction func newLoginButtonpressed(_ sender: Any) {
+    }
+    
+    
     func getWiFiSsid() -> String? {
     var ssid: String?
     if let interfaces = CNCopySupportedInterfaces() as NSArray? {
