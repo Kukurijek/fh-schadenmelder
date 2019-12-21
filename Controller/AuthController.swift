@@ -19,6 +19,21 @@ class AuthController: UIViewController {
         super.viewDidLoad()
 
     }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        if Auth.auth().currentUser != nil {
+            ProgressHUD.show("Laden...", interaction: false)
+            DispatchQueue.main.async {
+                Timer.scheduledTimer(withTimeInterval: 1, repeats: false) { (timer) in
+                    let homeViewController = self.storyboard?.instantiateViewController(withIdentifier: "mainviewcontroller") as? UITabBarController
+                    self.view.window?.rootViewController = homeViewController
+                    self.view.window?.makeKeyAndVisible()
+                    ProgressHUD.showSuccess("Login erfolgreich")
+                }
+            }
+        }
+    }
 
     @IBAction func loginButtonPressed(_ sender: Any) {
         ProgressHUD.show("Laden...", interaction: false)

@@ -15,6 +15,9 @@ class ListeController: UIViewController, UITableViewDelegate, UITableViewDataSou
     
     var entries: [String] = []
     
+    override var prefersStatusBarHidden: Bool {
+        return true
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,8 +35,8 @@ class ListeController: UIViewController, UITableViewDelegate, UITableViewDataSou
      func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = table.dequeueReusableCell(withIdentifier: "EntriesListCellIdentifier", for: indexPath) as? EntriesListCell else { fatalError() }
         
-
-        cell.textLabel?.text = "TEST"
+        cell.date.text = "testdate"
+        //cell.textLabel?.text = "TEST"
         
      return cell
      }
