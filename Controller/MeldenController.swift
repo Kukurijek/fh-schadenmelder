@@ -30,7 +30,7 @@ class MeldenController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         addTargetToTheTextField()
         send.isHidden = true
-        let imageTemp = UIImage(named: "campus.jpg")
+        let imageTemp = UIImage(named: "image.jpg")
         image.image = imageTemp
         selectedImage = imageTemp
     }
@@ -118,8 +118,12 @@ class MeldenController: UIViewController {
                 return
             }
             ProgressHUD.showSuccess("Eintrag erstellt")
+            DispatchQueue.main.async {
+                Timer.scheduledTimer(withTimeInterval: 1, repeats: false) { (timer) in
+                    self.tabBarController?.selectedIndex = 0
+                }
+            }
         }
-        
     }
 
 

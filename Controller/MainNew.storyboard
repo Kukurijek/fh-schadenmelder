@@ -215,7 +215,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="QQD-5W-Mvk"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Melden" id="XoD-bY-AiY"/>
+                    <tabBarItem key="tabBarItem" tag="1" title="Melden" id="XoD-bY-AiY"/>
                     <connections>
                         <outlet property="deleteImage" destination="bzP-TF-6av" id="YLG-Us-2yU"/>
                         <outlet property="image" destination="ICe-K4-Ldo" id="nFm-to-ccg"/>
@@ -257,7 +257,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="zFS-Ja-9NM"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Einstellungen" id="Zg4-qn-52W"/>
+                    <tabBarItem key="tabBarItem" tag="2" title="Einstellungen" id="Zg4-qn-52W"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GSM-XE-Ne5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
