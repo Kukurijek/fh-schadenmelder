@@ -35,6 +35,7 @@
 		C794D83023AE4A3C005CFD34 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C794D82F23AE4A3C005CFD34 /* TabBarController.swift */; };
 		C794D83223AE4CE5005CFD34 /* MeldenController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C794D83123AE4CE5005CFD34 /* MeldenController.swift */; };
 		C794D83423AE4F3D005CFD34 /* ListeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C794D83323AE4F3D005CFD34 /* ListeController.swift */; };
+		C794D83723AE5291005CFD34 /* EntriesListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C794D83623AE5291005CFD34 /* EntriesListCell.swift */; };
 		C7CC21F2237842B100C71102 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7CC21F1237842B100C71102 /* AppDelegate.swift */; };
 		C7CC21F4237842B100C71102 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7CC21F3237842B100C71102 /* ViewController.swift */; };
 		C7CC21F7237842B100C71102 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C7CC21F5237842B100C71102 /* Main.storyboard */; };
@@ -102,6 +103,7 @@
 		C794D82F23AE4A3C005CFD34 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		C794D83123AE4CE5005CFD34 /* MeldenController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeldenController.swift; sourceTree = "<group>"; };
 		C794D83323AE4F3D005CFD34 /* ListeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListeController.swift; sourceTree = "<group>"; };
+		C794D83623AE5291005CFD34 /* EntriesListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntriesListCell.swift; sourceTree = "<group>"; };
 		C7CC21EE237842B100C71102 /* FH Schadenmelder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "FH Schadenmelder.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C7CC21F1237842B100C71102 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C7CC21F3237842B100C71102 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -235,6 +237,14 @@
 			path = SchadenEintrag;
 			sourceTree = "<group>";
 		};
+		C794D83523AE5249005CFD34 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				C794D83623AE5291005CFD34 /* EntriesListCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
 		C7CC21E5237842B100C71102 = {
 			isa = PBXGroup;
 			children = (
@@ -297,6 +307,7 @@
 		C7CC221F2378449400C71102 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				C794D83523AE5249005CFD34 /* Cell */,
 				C728459F238029E6000DC419 /* Login */,
 				C7CC22242378489400C71102 /* Home */,
 				C75C2A5F2381ABC700A3720D /* SchadenEintrag */,
@@ -615,6 +626,7 @@
 				C75C2A612381AC1000A3720D /* SchadenEintragController.swift in Sources */,
 				C7CC21F2237842B100C71102 /* AppDelegate.swift in Sources */,
 				C72845A4238036D3000DC419 /* CameraController.swift in Sources */,
+				C794D83723AE5291005CFD34 /* EntriesListCell.swift in Sources */,
 				C738A693237C8950002A49E3 /* extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
