@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import ProgressHUD
+import FirebaseAuth
 
 class AuthController: UIViewController {
 
@@ -19,6 +21,22 @@ class AuthController: UIViewController {
     }
 
     @IBAction func loginButtonPressed(_ sender: Any) {
-        print("TEEEEEEEEST")
+        ProgressHUD.show("Laden...", interaction: false)
+        
+        Auth.auth().signIn(withEmail: username.text!, password: password.text!) { (user, error) in
+            if let err = error {
+                print(err.localizedDescription)
+                ProgressHUD.showError("Falsche Daten!")
+                return
+            }
+            print("Login successful")
+            ProgressHUD.showSuccess("Login erfolgreich")
+                
+        
+        let homeViewController = self.storyboard?.instantiateViewController(withIdentifier: "mainviewcontroller") as? UITabBarController
+        self.view.window?.rootViewController = homeViewController
+        self.view.window?.makeKeyAndVisible()
+        }
+
     }
 }
