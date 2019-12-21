@@ -14,7 +14,7 @@ class SplashScreenController: UIViewController {
         super.viewDidLoad()
 
         DispatchQueue.main.asyncAfter(deadline: .now() + 1.0){
-            let nextVC = self.storyboard?.instantiateViewController(withIdentifier: "secondviewcontroller") as! LoginController
+            let nextVC = self.storyboard?.instantiateViewController(withIdentifier: "secondviewcontroller") as! AuthController
             nextVC.modalPresentationStyle = .fullScreen
             self.present(nextVC, animated: true, completion: nil)
         }

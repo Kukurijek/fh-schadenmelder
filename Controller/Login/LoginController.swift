@@ -18,9 +18,6 @@ class LoginController: UIViewController {
     @IBOutlet weak var passwordField: UITextField!
     
     
-    @IBOutlet weak var newUsernmaeField: UITextField!
-    @IBOutlet weak var newPasswordField: UITextField!
-    
 
     override func viewDidLoad() {
       //  usernameField.delegate = self
@@ -64,9 +61,6 @@ class LoginController: UIViewController {
 //        vc.modalPresentationStyle = .fullScreen //or .overFullScreen for transparency
 //        self.present(vc, animated: true, completion: nil)
        // }
-    }
-    
-    @IBAction func newLoginButtonpressed(_ sender: Any) {
     }
     
     

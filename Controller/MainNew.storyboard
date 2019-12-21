@@ -33,10 +33,10 @@
             </objects>
             <point key="canvasLocation" x="-1267" y="-125"/>
         </scene>
-        <!--Login Controller-->
+        <!--Auth Controller-->
         <scene sceneID="VjC-jK-b20">
             <objects>
-                <viewController storyboardIdentifier="secondviewcontroller" useStoryboardIdentifierAsRestorationIdentifier="YES" id="4R8-o5-aQt" customClass="LoginController" customModule="FH_Schadenmelder" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="secondviewcontroller" useStoryboardIdentifierAsRestorationIdentifier="YES" id="4R8-o5-aQt" customClass="AuthController" customModule="FH_Schadenmelder" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8dp-Kk-enM">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -76,8 +76,8 @@
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <action selector="newLoginButtonpressed:" destination="4R8-o5-aQt" eventType="touchUpInside" id="RPt-yO-tok"/>
-                                    <segue destination="5Qd-3S-Hjr" kind="show" id="cZt-BR-pdI"/>
+                                    <action selector="loginButtonPressed:" destination="4R8-o5-aQt" eventType="touchUpInside" id="ese-zq-CMD"/>
+                                    <segue destination="5Qd-3S-Hjr" kind="presentation" id="8kQ-8k-qUI"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -105,8 +105,9 @@
                         <viewLayoutGuide key="safeArea" id="bNE-Md-B7h"/>
                     </view>
                     <connections>
-                        <outlet property="newPasswordField" destination="yF6-mN-pJk" id="qkP-tR-BTu"/>
-                        <outlet property="newUsernmaeField" destination="5GD-5J-dS7" id="YzM-Ga-XML"/>
+                        <outlet property="loginButton" destination="tD5-pg-lRa" id="GXa-SE-ugD"/>
+                        <outlet property="password" destination="yF6-mN-pJk" id="vTL-sF-fDh"/>
+                        <outlet property="username" destination="5GD-5J-dS7" id="h8f-Zp-QM7"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Eyg-fz-Ywg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -156,6 +157,9 @@
                                 <state key="normal" title="Foto löschen">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="deletePhotoPressed:" destination="gmr-qD-CaW" eventType="touchUpInside" id="AQ5-8y-TwA"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Notiz" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xoX-bJ-61R">
                                 <rect key="frame" x="20" y="393" width="374" height="21"/>

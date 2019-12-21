@@ -25,16 +25,14 @@ class MeldenController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        selectedImage = UIImage(named: "campus.jpg")
-
-        // Do any additional setup after loading the view.
     }
     
     override func viewDidAppear(_ animated: Bool) {
         addTargetToTheTextField()
         send.isHidden = true
-        let imageTemp = UIImage(named: "image.jpg")
+        let imageTemp = UIImage(named: "campus.jpg")
         image.image = imageTemp
+        selectedImage = imageTemp
     }
     
     // MARK: - Dismiss Keyboard
@@ -130,4 +128,10 @@ class MeldenController: UIViewController {
         uploadNewDamageEntryToDatabase()
         print("done")
     }
+    
+    @IBAction func deletePhotoPressed(_ sender: Any) {
+        let imageTemp = UIImage(named: "image.jpg")
+        image.image = imageTemp
+    }
+    
 }
