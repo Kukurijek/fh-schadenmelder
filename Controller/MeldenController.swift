@@ -30,14 +30,14 @@ class MeldenController: UIViewController, UINavigationControllerDelegate, UIImag
     override func viewDidLoad() {
         super.viewDidLoad()
         addGestureToImage()
+        let imageTemp = UIImage(named: "image.jpg")
+        image.image = imageTemp
+        selectedImage = imageTemp
     }
     
     override func viewDidAppear(_ animated: Bool) {
         addTargetToTheTextField()
         send.isHidden = true
-        let imageTemp = UIImage(named: "image.jpg")
-        image.image = imageTemp
-        selectedImage = imageTemp
     }
     
     // MARK: - Dismiss Keyboard
