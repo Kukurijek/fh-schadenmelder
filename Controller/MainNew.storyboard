@@ -374,7 +374,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Time" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FmQ-Rn-Qnj">
-                                                    <rect key="frame" x="116" y="51" width="38" height="21"/>
+                                                    <rect key="frame" x="91" y="51" width="38" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -394,7 +394,7 @@
                                                 </label>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="FmQ-Rn-Qnj" firstAttribute="leading" secondItem="6EE-wP-Q5K" secondAttribute="trailing" constant="70" id="4fv-7Z-20r"/>
+                                                <constraint firstItem="FmQ-Rn-Qnj" firstAttribute="leading" secondItem="6EE-wP-Q5K" secondAttribute="trailing" constant="45" id="4fv-7Z-20r"/>
                                                 <constraint firstAttribute="bottom" secondItem="tzE-HV-lZ1" secondAttribute="bottom" constant="12" id="F33-pz-9bd"/>
                                                 <constraint firstItem="SdL-X5-Xph" firstAttribute="top" secondItem="NI9-v3-l4x" secondAttribute="top" constant="10" id="a0h-FH-uxE"/>
                                                 <constraint firstItem="FmQ-Rn-Qnj" firstAttribute="top" secondItem="SdL-X5-Xph" secondAttribute="bottom" constant="20" id="agw-yU-WYz"/>
