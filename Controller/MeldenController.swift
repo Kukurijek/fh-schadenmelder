@@ -168,5 +168,10 @@ class MeldenController: UIViewController, UINavigationControllerDelegate, UIImag
         let imageTemp = UIImage(named: "image.jpg")
         image.image = imageTemp
     }
+    @IBAction func makePhotoPressed(_ sender: Any) {
+        let nextVC = self.storyboard?.instantiateViewController(withIdentifier: "cameraviewcontroller") as! TakePhotoController
+        nextVC.modalPresentationStyle = .fullScreen
+        self.present(nextVC, animated: true, completion: nil)
+    }
     
 }

@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="qoF-SH-59K">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="qoF-SH-59K">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -150,7 +150,7 @@
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <segue destination="HGz-97-Wc0" kind="show" id="K5t-y2-iW7"/>
+                                    <action selector="makePhotoPressed:" destination="gmr-qD-CaW" eventType="touchUpInside" id="KNz-Lr-ifF"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bzP-TF-6av">
@@ -236,13 +236,13 @@
         <!--Take Photo Controller-->
         <scene sceneID="Vct-pg-bnw">
             <objects>
-                <viewController id="HGz-97-Wc0" customClass="TakePhotoController" customModule="FH_Schadenmelder" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="cameraviewcontroller" useStoryboardIdentifierAsRestorationIdentifier="YES" id="HGz-97-Wc0" customClass="TakePhotoController" customModule="FH_Schadenmelder" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="k5g-QO-wLv">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="v5h-6N-qhB">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="v5h-6N-qhB">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kjv-8g-6iH" userLabel="Switch">
                                 <rect key="frame" x="293" y="745" width="79" height="48"/>
@@ -258,7 +258,6 @@
                                 <state key="normal" title="Löschen/Zurück"/>
                                 <connections>
                                     <action selector="backPressed:" destination="HGz-97-Wc0" eventType="touchUpInside" id="MQP-oq-BF9"/>
-                                    <action selector="takePhotoPressed:" destination="HGz-97-Wc0" eventType="touchUpInside" id="g8C-tx-Afg"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x3N-tl-HpD">
@@ -278,7 +277,7 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="hWz-Q3-uLc" firstAttribute="bottom" secondItem="v5h-6N-qhB" secondAttribute="bottom" id="93L-n1-apQ"/>
                             <constraint firstItem="v5h-6N-qhB" firstAttribute="leading" secondItem="hWz-Q3-uLc" secondAttribute="leading" id="9lz-FX-4nB"/>

@@ -20,12 +20,20 @@ class TakePhotoController: UIViewController, AVCapturePhotoCaptureDelegate {
     
     var captureSession = AVCaptureSession()
     var photoOutput = AVCapturePhotoOutput()
+    
+    override var prefersStatusBarHidden: Bool {
+        return true
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
         setupCaptureSession()
         takePhoto.isHidden = false
         savePhotoButton.isHidden = true
+        switchCamera.isHidden = false
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
     }
     
     func setupCaptureSession() {
@@ -106,6 +114,12 @@ class TakePhotoController: UIViewController, AVCapturePhotoCaptureDelegate {
         photoOutput.capturePhoto(with: settings, delegate: self)
     }
     
+    func photoOutput(_ output: AVCapturePhotoOutput, didFinishProcessingPhoto photo: AVCapturePhoto, error: Error?) {
+        if let imageData = photo.fileDataRepresentation() {
+            imagePreview.image = UIImage(data: imageData)
+        }
+    }
+    
     func savePhoto() {
         let library = PHPhotoLibrary.shared()
         guard let image = imagePreview.image else { return }
@@ -134,14 +148,23 @@ class TakePhotoController: UIViewController, AVCapturePhotoCaptureDelegate {
         switchCamerafunc()
     }
     @IBAction func takePhotoPressed(_ sender: Any) {
+        takePhotoFunc()
+        takePhoto.isHidden = true
+        savePhotoButton.isHidden = false
+        switchCamera.isHidden = true
     }
     @IBAction func backPressed(_ sender: Any) {
         cancel()
-        takePhoto.isHidden = true
+        takePhoto.isHidden = false
+        switchCamera.isHidden = false
+        savePhotoButton.isHidden = true
+
     }
     @IBAction func savePhotoPressed(_ sender: Any) {
         savePhoto()
         savePhotoButton.isHidden = true
         takePhoto.isHidden = false
+        switchCamera.isHidden = false
+        imagePreview.image = nil
     }
 }
