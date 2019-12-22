@@ -11,7 +11,7 @@ import ProgressHUD
 import FirebaseStorage
 import FirebaseDatabase
 
-class MeldenController: UIViewController {
+class MeldenController: UIViewController, UINavigationControllerDelegate, UIImagePickerControllerDelegate {
 
     @IBOutlet weak var typeOfDamage: UITextField!
     @IBOutlet weak var placeOfDamage: UITextField!
@@ -23,8 +23,13 @@ class MeldenController: UIViewController {
     
     var selectedImage: UIImage?
     
+    override var prefersStatusBarHidden: Bool {
+        return true
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        addGestureToImage()
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -125,8 +130,34 @@ class MeldenController: UIViewController {
             }
         }
     }
+    
+    // MARK: - Make photo clickable
+    func addGestureToImage() {
+        selectedImage = UIImage(named: "image.jpg")
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(handleSelectedPhoto))
+        image.addGestureRecognizer(tapGesture)
+        image.isUserInteractionEnabled = true
+    }
+    
+    @objc func handleSelectedPhoto() {
+        let pickerController = UIImagePickerController()
+        pickerController.delegate = self
+        pickerController.allowsEditing = true
+        present(pickerController, animated: true, completion: nil)
+        
+    }
 
-
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+         if let editedPhoto = info[.cropRect] as? UIImage {
+             image.image = editedPhoto
+             selectedImage = editedPhoto
+         } else if let originalImage = info[.originalImage] as? UIImage {
+             image.image = originalImage
+             selectedImage = originalImage
+         }
+         dismiss(animated: true, completion: nil)
+     }
+    
     @IBAction func sendButtonPressed(_ sender: Any) {
         print("sending data")
         uploadNewDamageEntryToDatabase()
