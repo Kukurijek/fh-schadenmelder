@@ -278,6 +278,7 @@
                     </view>
                     <connections>
                         <outlet property="back" destination="ugK-my-cNj" id="pu8-vf-x4I"/>
+                        <outlet property="imagePreview" destination="v5h-6N-qhB" id="9dP-NT-8XA"/>
                         <outlet property="switchCamera" destination="Kjv-8g-6iH" id="psC-7O-GaD"/>
                         <outlet property="takePhoto" destination="UNb-wp-ZY7" id="kUi-G5-plu"/>
                     </connections>

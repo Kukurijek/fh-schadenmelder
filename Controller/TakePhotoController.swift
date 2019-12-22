@@ -15,11 +15,13 @@ class TakePhotoController: UIViewController {
     @IBOutlet weak var takePhoto: UIButton!
     @IBOutlet weak var switchCamera: UIButton!
     @IBOutlet weak var back: UIButton!
+    @IBOutlet weak var imagePreview: UIImageView!
     
     var captureSession = AVCaptureSession()
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        takePhoto.isHidden = false
     }
     
     func switchCamerafunc() {
@@ -60,11 +62,21 @@ class TakePhotoController: UIViewController {
         return nil
     }
     
+    func cancel() {
+        if imagePreview.image == nil {
+            dismiss(animated: true, completion: nil)
+        } else {
+            imagePreview.image = nil
+        }
+    }
+    
     @IBAction func switchCameraPressed(_ sender: Any) {
         switchCamerafunc()
     }
     @IBAction func takePhotoPressed(_ sender: Any) {
     }
     @IBAction func backPressed(_ sender: Any) {
+        cancel()
+        takePhoto.isHidden = true
     }
 }
