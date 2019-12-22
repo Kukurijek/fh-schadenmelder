@@ -2,6 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:/Users/filipovic/projects/privat/fh-schadenmelder/Controller/TakePhotoController.swift">
+   </FileRef>
+   <FileRef
       location = "group:FH Schadenmelder.xcodeproj">
    </FileRef>
    <FileRef
