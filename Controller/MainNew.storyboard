@@ -317,10 +317,17 @@
                                     <action selector="logOutPressed:" destination="boG-VE-YsR" eventType="touchUpInside" id="ccp-aQ-kVy"/>
                                 </connections>
                             </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="campus.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="91C-28-voi">
+                                <rect key="frame" x="30" y="74" width="354" height="165"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="91C-28-voi" firstAttribute="leading" secondItem="zFS-Ja-9NM" secondAttribute="leading" constant="30" id="3Sg-aN-QiB"/>
+                            <constraint firstItem="zFS-Ja-9NM" firstAttribute="trailing" secondItem="91C-28-voi" secondAttribute="trailing" constant="30" id="CZD-n5-K1p"/>
+                            <constraint firstItem="vU5-XC-zsQ" firstAttribute="top" secondItem="91C-28-voi" secondAttribute="bottom" constant="105" id="E0d-hr-eHz"/>
                             <constraint firstItem="vU5-XC-zsQ" firstAttribute="top" secondItem="zFS-Ja-9NM" secondAttribute="top" constant="300" id="Iy0-x0-vQy"/>
+                            <constraint firstItem="91C-28-voi" firstAttribute="top" secondItem="zFS-Ja-9NM" secondAttribute="top" constant="30" id="TbB-bv-EeU"/>
                             <constraint firstItem="vU5-XC-zsQ" firstAttribute="leading" secondItem="zFS-Ja-9NM" secondAttribute="leading" constant="50" id="Zlh-gq-uEj"/>
                             <constraint firstItem="zFS-Ja-9NM" firstAttribute="trailing" secondItem="vU5-XC-zsQ" secondAttribute="trailing" constant="50" id="wiv-y5-5y1"/>
                         </constraints>
@@ -387,7 +394,7 @@
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Category" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tzE-HV-lZ1">
-                                                    <rect key="frame" x="10" y="92" width="71" height="21"/>
+                                                    <rect key="frame" x="10" y="92" width="214" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -396,6 +403,7 @@
                                             <constraints>
                                                 <constraint firstItem="FmQ-Rn-Qnj" firstAttribute="leading" secondItem="6EE-wP-Q5K" secondAttribute="trailing" constant="45" id="4fv-7Z-20r"/>
                                                 <constraint firstAttribute="bottom" secondItem="tzE-HV-lZ1" secondAttribute="bottom" constant="12" id="F33-pz-9bd"/>
+                                                <constraint firstItem="4FD-74-BE6" firstAttribute="leading" secondItem="tzE-HV-lZ1" secondAttribute="trailing" constant="50" id="PRy-nN-HUX"/>
                                                 <constraint firstItem="SdL-X5-Xph" firstAttribute="top" secondItem="NI9-v3-l4x" secondAttribute="top" constant="10" id="a0h-FH-uxE"/>
                                                 <constraint firstItem="FmQ-Rn-Qnj" firstAttribute="top" secondItem="SdL-X5-Xph" secondAttribute="bottom" constant="20" id="agw-yU-WYz"/>
                                                 <constraint firstItem="tzE-HV-lZ1" firstAttribute="top" secondItem="6EE-wP-Q5K" secondAttribute="bottom" constant="20" id="bti-xS-G6D"/>
@@ -468,6 +476,7 @@
     </scenes>
     <resources>
         <image name="FH-CAMPUS-WIEN.gif" width="292" height="172"/>
+        <image name="campus.jpg" width="275" height="183"/>
         <image name="image.jpg" width="350" height="350"/>
     </resources>
 </document>

@@ -9,8 +9,6 @@
 /* Begin PBXBuildFile section */
 		2681E34B8E0806BA3CA667E4 /* Pods_FH_SchadenmelderTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 53FC7B1CA412C71DA78335C3 /* Pods_FH_SchadenmelderTests.framework */; };
 		2F09D869B0C5D27F75FACC2C /* Pods_FH_Schadenmelder_FH_SchadenmelderUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7A7BC8DE72772D5E912F6E8 /* Pods_FH_Schadenmelder_FH_SchadenmelderUITests.framework */; };
-		C705C1D7238A90B800B47E46 /* SchadenViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C705C1D6238A90B800B47E46 /* SchadenViewCell.swift */; };
-		C705C1DA238B462A00B47E46 /* EintragModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C705C1D9238B462A00B47E46 /* EintragModel.swift */; };
 		C705C1DD238BF23A00B47E46 /* testTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C705C1DB238BF23A00B47E46 /* testTableViewCell.swift */; };
 		C705C1DE238BF23A00B47E46 /* testTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C705C1DC238BF23A00B47E46 /* testTableViewCell.xib */; };
 		C718E4E9238557CA00DE8B57 /* image.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C718E4E8238557CA00DE8B57 /* image.jpg */; };
@@ -25,10 +23,7 @@
 		C738A698237E9827002A49E3 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C738A696237E9827002A49E3 /* GoogleService-Info.plist */; };
 		C738A699237E9827002A49E3 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C738A696237E9827002A49E3 /* GoogleService-Info.plist */; };
 		C75C2A5C2381956000A3720D /* ProgressHUD.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C75C2A5B2381956000A3720D /* ProgressHUD.framework */; };
-		C75C2A612381AC1000A3720D /* SchadenEintragController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C75C2A602381AC1000A3720D /* SchadenEintragController.swift */; };
-		C75C2A632381AC2100A3720D /* SchadenEintragController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C75C2A622381AC2100A3720D /* SchadenEintragController.xib */; };
 		C76C3FAD238D5221003D443A /* SchadenListe.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C76C3FAC238D5221003D443A /* SchadenListe.storyboard */; };
-		C76C3FAF238D5658003D443A /* SchadenListeStoryBoardController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C76C3FAE238D5658003D443A /* SchadenListeStoryBoardController.swift */; };
 		C78CE9AD23AFC56700D5C55E /* Entry.swift in Sources */ = {isa = PBXBuildFile; fileRef = C78CE9AC23AFC56700D5C55E /* Entry.swift */; };
 		C794D82A23AD1B38005CFD34 /* MainNew.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C794D82923AD1B38005CFD34 /* MainNew.storyboard */; };
 		C794D82C23AE40AB005CFD34 /* SplashScreenController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C794D82B23AE40AB005CFD34 /* SplashScreenController.swift */; };
@@ -40,18 +35,12 @@
 		C794D83923AE8964005CFD34 /* AuthController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C794D83823AE8964005CFD34 /* AuthController.swift */; };
 		C794D83B23AF6885005CFD34 /* TakePhotoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C794D83A23AF6885005CFD34 /* TakePhotoController.swift */; };
 		C7CC21F2237842B100C71102 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7CC21F1237842B100C71102 /* AppDelegate.swift */; };
-		C7CC21F4237842B100C71102 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7CC21F3237842B100C71102 /* ViewController.swift */; };
 		C7CC21F7237842B100C71102 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C7CC21F5237842B100C71102 /* Main.storyboard */; };
 		C7CC21F9237842B500C71102 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C7CC21F8237842B500C71102 /* Assets.xcassets */; };
 		C7CC21FC237842B500C71102 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C7CC21FA237842B500C71102 /* LaunchScreen.storyboard */; };
 		C7CC2207237842B500C71102 /* FH_SchadenmelderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7CC2206237842B500C71102 /* FH_SchadenmelderTests.swift */; };
 		C7CC2212237842B600C71102 /* FH_SchadenmelderUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7CC2211237842B600C71102 /* FH_SchadenmelderUITests.swift */; };
-		C7CC22212378453A00C71102 /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7CC22202378453A00C71102 /* LoginController.swift */; };
-		C7CC22232378454F00C71102 /* LoginController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C7CC22222378454F00C71102 /* LoginController.xib */; };
-		C7CC2226237848B300C71102 /* HomeController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C7CC2225237848B300C71102 /* HomeController.xib */; };
-		C7CC2228237848C700C71102 /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7CC2227237848C700C71102 /* HomeController.swift */; };
 		C7CC222B23784A1700C71102 /* SchadenListeController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C7CC222A23784A1700C71102 /* SchadenListeController.xib */; };
-		C7CC222D23784A3F00C71102 /* SchadenListeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7CC222C23784A3F00C71102 /* SchadenListeController.swift */; };
 		C7CC22302378513800C71102 /* FH-CAMPUS-WIEN.gif in Resources */ = {isa = PBXBuildFile; fileRef = C7CC222F2378513800C71102 /* FH-CAMPUS-WIEN.gif */; };
 		EF4EE25604E97FA447B2DE15 /* Pods_FH_Schadenmelder.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 26502B4B308BE53487099F10 /* Pods_FH_Schadenmelder.framework */; };
 /* End PBXBuildFile section */
@@ -81,8 +70,6 @@
 		65EC9DD8A1DB12B5A0B01684 /* Pods-FH SchadenmelderTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FH SchadenmelderTests.release.xcconfig"; path = "Target Support Files/Pods-FH SchadenmelderTests/Pods-FH SchadenmelderTests.release.xcconfig"; sourceTree = "<group>"; };
 		A392E8106F60019FAD471544 /* Pods-FH SchadenmelderTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FH SchadenmelderTests.debug.xcconfig"; path = "Target Support Files/Pods-FH SchadenmelderTests/Pods-FH SchadenmelderTests.debug.xcconfig"; sourceTree = "<group>"; };
 		B4DA1903EE0C79B2B0731BB4 /* Pods-FH Schadenmelder.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FH Schadenmelder.release.xcconfig"; path = "Target Support Files/Pods-FH Schadenmelder/Pods-FH Schadenmelder.release.xcconfig"; sourceTree = "<group>"; };
-		C705C1D6238A90B800B47E46 /* SchadenViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchadenViewCell.swift; sourceTree = "<group>"; };
-		C705C1D9238B462A00B47E46 /* EintragModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EintragModel.swift; sourceTree = "<group>"; };
 		C705C1DB238BF23A00B47E46 /* testTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = testTableViewCell.swift; sourceTree = "<group>"; };
 		C705C1DC238BF23A00B47E46 /* testTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = testTableViewCell.xib; sourceTree = "<group>"; };
 		C718E4E8238557CA00DE8B57 /* image.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = image.jpg; sourceTree = "<group>"; };
@@ -96,10 +83,7 @@
 		C738A694237CA20D002A49E3 /* campus.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = campus.jpg; sourceTree = "<group>"; };
 		C738A696237E9827002A49E3 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		C75C2A5B2381956000A3720D /* ProgressHUD.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = ProgressHUD.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		C75C2A602381AC1000A3720D /* SchadenEintragController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchadenEintragController.swift; sourceTree = "<group>"; };
-		C75C2A622381AC2100A3720D /* SchadenEintragController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SchadenEintragController.xib; sourceTree = "<group>"; };
 		C76C3FAC238D5221003D443A /* SchadenListe.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SchadenListe.storyboard; sourceTree = "<group>"; };
-		C76C3FAE238D5658003D443A /* SchadenListeStoryBoardController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchadenListeStoryBoardController.swift; sourceTree = "<group>"; };
 		C78CE9AC23AFC56700D5C55E /* Entry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Entry.swift; sourceTree = "<group>"; };
 		C794D82923AD1B38005CFD34 /* MainNew.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MainNew.storyboard; sourceTree = "<group>"; };
 		C794D82B23AE40AB005CFD34 /* SplashScreenController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreenController.swift; sourceTree = "<group>"; };
@@ -112,7 +96,6 @@
 		C794D83A23AF6885005CFD34 /* TakePhotoController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TakePhotoController.swift; sourceTree = "<group>"; };
 		C7CC21EE237842B100C71102 /* FH Schadenmelder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "FH Schadenmelder.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C7CC21F1237842B100C71102 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		C7CC21F3237842B100C71102 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		C7CC21F6237842B100C71102 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C7CC21F8237842B500C71102 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C7CC21FB237842B500C71102 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -123,12 +106,7 @@
 		C7CC220D237842B600C71102 /* FH SchadenmelderUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "FH SchadenmelderUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C7CC2211237842B600C71102 /* FH_SchadenmelderUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FH_SchadenmelderUITests.swift; sourceTree = "<group>"; };
 		C7CC2213237842B600C71102 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		C7CC22202378453A00C71102 /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
-		C7CC22222378454F00C71102 /* LoginController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginController.xib; sourceTree = "<group>"; };
-		C7CC2225237848B300C71102 /* HomeController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeController.xib; sourceTree = "<group>"; };
-		C7CC2227237848C700C71102 /* HomeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeController.swift; sourceTree = "<group>"; };
 		C7CC222A23784A1700C71102 /* SchadenListeController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SchadenListeController.xib; sourceTree = "<group>"; };
-		C7CC222C23784A3F00C71102 /* SchadenListeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchadenListeController.swift; sourceTree = "<group>"; };
 		C7CC222F2378513800C71102 /* FH-CAMPUS-WIEN.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "FH-CAMPUS-WIEN.gif"; sourceTree = "<group>"; };
 		D770F4B11A2A2AC52E2EC0CC /* Pods-FH Schadenmelder-FH SchadenmelderUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FH Schadenmelder-FH SchadenmelderUITests.debug.xcconfig"; path = "Target Support Files/Pods-FH Schadenmelder-FH SchadenmelderUITests/Pods-FH Schadenmelder-FH SchadenmelderUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		D7A7BC8DE72772D5E912F6E8 /* Pods_FH_Schadenmelder_FH_SchadenmelderUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FH_Schadenmelder_FH_SchadenmelderUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -192,7 +170,6 @@
 		C705C1D8238B45FA00B47E46 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				C705C1D9238B462A00B47E46 /* EintragModel.swift */,
 				C705C1DB238BF23A00B47E46 /* testTableViewCell.swift */,
 				C705C1DC238BF23A00B47E46 /* testTableViewCell.xib */,
 				C78CE9AC23AFC56700D5C55E /* Entry.swift */,
@@ -207,15 +184,6 @@
 				C728459B23802831000DC419 /* SchadenMeldenController.xib */,
 			);
 			path = SchadenMelden;
-			sourceTree = "<group>";
-		};
-		C728459F238029E6000DC419 /* Login */ = {
-			isa = PBXGroup;
-			children = (
-				C7CC22202378453A00C71102 /* LoginController.swift */,
-				C7CC22222378454F00C71102 /* LoginController.xib */,
-			);
-			path = Login;
 			sourceTree = "<group>";
 		};
 		C72845A02380369E000DC419 /* Camera */ = {
@@ -233,15 +201,6 @@
 				C738A692237C894F002A49E3 /* extensions.swift */,
 			);
 			path = extensions;
-			sourceTree = "<group>";
-		};
-		C75C2A5F2381ABC700A3720D /* SchadenEintrag */ = {
-			isa = PBXGroup;
-			children = (
-				C75C2A602381AC1000A3720D /* SchadenEintragController.swift */,
-				C75C2A622381AC2100A3720D /* SchadenEintragController.xib */,
-			);
-			path = SchadenEintrag;
 			sourceTree = "<group>";
 		};
 		C794D83523AE5249005CFD34 /* Cell */ = {
@@ -283,7 +242,6 @@
 			children = (
 				C72845AD23806190000DC419 /* FH Schadenmelder.entitlements */,
 				C7CC21F1237842B100C71102 /* AppDelegate.swift */,
-				C7CC21F3237842B100C71102 /* ViewController.swift */,
 				C7CC21F5237842B100C71102 /* Main.storyboard */,
 				C7CC21F8237842B500C71102 /* Assets.xcassets */,
 				C7CC21FA237842B500C71102 /* LaunchScreen.storyboard */,
@@ -315,9 +273,7 @@
 			isa = PBXGroup;
 			children = (
 				C794D83523AE5249005CFD34 /* Cell */,
-				C728459F238029E6000DC419 /* Login */,
 				C7CC22242378489400C71102 /* Home */,
-				C75C2A5F2381ABC700A3720D /* SchadenEintrag */,
 				C728459A238027DE000DC419 /* SchadenMelden */,
 				C72845A02380369E000DC419 /* Camera */,
 				C7CC2229237849EF00C71102 /* SchadenListe */,
@@ -336,8 +292,6 @@
 		C7CC22242378489400C71102 /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				C7CC2227237848C700C71102 /* HomeController.swift */,
-				C7CC2225237848B300C71102 /* HomeController.xib */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -345,11 +299,8 @@
 		C7CC2229237849EF00C71102 /* SchadenListe */ = {
 			isa = PBXGroup;
 			children = (
-				C7CC222C23784A3F00C71102 /* SchadenListeController.swift */,
 				C7CC222A23784A1700C71102 /* SchadenListeController.xib */,
-				C705C1D6238A90B800B47E46 /* SchadenViewCell.swift */,
 				C76C3FAC238D5221003D443A /* SchadenListe.storyboard */,
-				C76C3FAE238D5658003D443A /* SchadenListeStoryBoardController.swift */,
 			);
 			path = SchadenListe;
 			sourceTree = "<group>";
@@ -475,18 +426,15 @@
 			files = (
 				C7CC21FC237842B500C71102 /* LaunchScreen.storyboard in Resources */,
 				C728459C23802831000DC419 /* SchadenMeldenController.xib in Resources */,
-				C7CC22232378454F00C71102 /* LoginController.xib in Resources */,
 				C705C1DE238BF23A00B47E46 /* testTableViewCell.xib in Resources */,
 				C738A697237E9827002A49E3 /* GoogleService-Info.plist in Resources */,
 				C738A695237CA20E002A49E3 /* campus.jpg in Resources */,
-				C75C2A632381AC2100A3720D /* SchadenEintragController.xib in Resources */,
 				C76C3FAD238D5221003D443A /* SchadenListe.storyboard in Resources */,
 				C7CC22302378513800C71102 /* FH-CAMPUS-WIEN.gif in Resources */,
 				C72845A2238036C6000DC419 /* CameraController.xib in Resources */,
 				C7CC21F9237842B500C71102 /* Assets.xcassets in Resources */,
 				C794D82A23AD1B38005CFD34 /* MainNew.storyboard in Resources */,
 				C718E4E9238557CA00DE8B57 /* image.jpg in Resources */,
-				C7CC2226237848B300C71102 /* HomeController.xib in Resources */,
 				C7CC222B23784A1700C71102 /* SchadenListeController.xib in Resources */,
 				C7CC21F7237842B100C71102 /* Main.storyboard in Resources */,
 			);
@@ -618,23 +566,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C76C3FAF238D5658003D443A /* SchadenListeStoryBoardController.swift in Sources */,
 				C794D83023AE4A3C005CFD34 /* TabBarController.swift in Sources */,
-				C7CC222D23784A3F00C71102 /* SchadenListeController.swift in Sources */,
 				C705C1DD238BF23A00B47E46 /* testTableViewCell.swift in Sources */,
-				C7CC2228237848C700C71102 /* HomeController.swift in Sources */,
 				C794D82C23AE40AB005CFD34 /* SplashScreenController.swift in Sources */,
 				C78CE9AD23AFC56700D5C55E /* Entry.swift in Sources */,
-				C7CC21F4237842B100C71102 /* ViewController.swift in Sources */,
 				C794D83223AE4CE5005CFD34 /* MeldenController.swift in Sources */,
 				C794D82E23AE4971005CFD34 /* SettingsController.swift in Sources */,
-				C7CC22212378453A00C71102 /* LoginController.swift in Sources */,
 				C728459E23802848000DC419 /* SchadenMeldenController.swift in Sources */,
-				C705C1D7238A90B800B47E46 /* SchadenViewCell.swift in Sources */,
-				C705C1DA238B462A00B47E46 /* EintragModel.swift in Sources */,
 				C794D83B23AF6885005CFD34 /* TakePhotoController.swift in Sources */,
 				C794D83423AE4F3D005CFD34 /* ListeController.swift in Sources */,
-				C75C2A612381AC1000A3720D /* SchadenEintragController.swift in Sources */,
 				C7CC21F2237842B100C71102 /* AppDelegate.swift in Sources */,
 				C72845A4238036D3000DC419 /* CameraController.swift in Sources */,
 				C794D83923AE8964005CFD34 /* AuthController.swift in Sources */,

@@ -27,9 +27,9 @@ class SettingsController: UIViewController {
             print(logoutError.localizedDescription)
         }
         print("Logout successful")
-        let vc = LoginController()
-        vc.modalPresentationStyle = .fullScreen //or .overFullScreen for transparency
-        self.present(vc, animated: true, completion: nil)
+        let nextVC = self.storyboard?.instantiateViewController(withIdentifier: "secondviewcontroller") as! AuthController
+        nextVC.modalPresentationStyle = .fullScreen
+        self.present(nextVC, animated: true, completion: nil)
     }
     
 }
