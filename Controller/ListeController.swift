@@ -24,7 +24,7 @@ class ListeController: UIViewController, UITableViewDelegate, UITableViewDataSou
         super.viewDidLoad()
         table.delegate = self
         table.dataSource = self
-        loadEintries()
+        loadEntries()
     }
 
      func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -35,17 +35,18 @@ class ListeController: UIViewController, UITableViewDelegate, UITableViewDataSou
         guard let cell = table.dequeueReusableCell(withIdentifier: "EntriesListCellIdentifier", for: indexPath) as? EntriesListCell else { fatalError() }
         
         cell.date.text = "testdate"
-        cell.title.text = "eeeee"
+        //cell.title.text = "eeeee"
         cell.time.text = "asewe"
         //cell.textLabel?.text = "TEST"
         
-     return cell
+        return cell
      }
      
-    func loadEintries() {
+    func loadEntries() {
         let refDatabase = Database.database().reference().child("Eintragae")
         
         refDatabase.observe(.childAdded) { (snapshot) in
+            print(snapshot)
             guard let dic = snapshot.value as? [String: Any] else { return }
             let newEintrag = EintragModel(dictionary: dic)
             self.entries.append(newEintrag)

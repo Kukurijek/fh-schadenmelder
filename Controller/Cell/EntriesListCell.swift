@@ -15,7 +15,7 @@ class EntriesListCell: UITableViewCell {
     @IBOutlet weak var category: UILabel!
     @IBOutlet weak var icon: UIImageView!
     
-    /*
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -26,5 +26,5 @@ class EntriesListCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
-*/
+
 }
