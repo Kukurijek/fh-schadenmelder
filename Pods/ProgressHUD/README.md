@@ -1,6 +1,4 @@
-[![I am available for hire](http://relatedcode.com/github/header10.png)](http://relatedcode.com)
-
-## WHAT'S NEW IN 2.51
+## WHAT'S NEW IN 2.70
 
 - General improvements
 

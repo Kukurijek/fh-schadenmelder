@@ -12,6 +12,7 @@ pod 'FirebaseAuth'
 pod 'Firebase/Database'
 pod 'FirebaseStorage'
 pod 'ProgressHUD'
+pod 'SDWebImage'
 # add pods for any other desired Firebase products
 # https://firebase.google.com/docs/ios/setup#available-pods
  
