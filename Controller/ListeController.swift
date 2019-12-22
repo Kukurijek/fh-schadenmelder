@@ -14,7 +14,7 @@ class ListeController: UIViewController, UITableViewDelegate, UITableViewDataSou
 
     @IBOutlet weak var table: UITableView!
     
-    var entries: [EintragModel] = []
+    var entries = [EntryModel]()
     
     override var prefersStatusBarHidden: Bool {
         return true
@@ -28,16 +28,19 @@ class ListeController: UIViewController, UITableViewDelegate, UITableViewDataSou
     }
 
      func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 4
+        return entries.count
      }
      
      func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = table.dequeueReusableCell(withIdentifier: "EntriesListCellIdentifier", for: indexPath) as? EntriesListCell else { fatalError() }
         
-        cell.date.text = "testdate"
-        //cell.title.text = "eeeee"
-        cell.time.text = "asewe"
-        //cell.textLabel?.text = "TEST"
+        cell.date.text = entries[indexPath.row].date
+        cell.time.text = entries[indexPath.row].time
+        cell.category.text = entries[indexPath.row].damagePlace
+        cell.title.text = entries[indexPath.row].damageType
+        //cell.icon. = entries[indexPath.row].photo
+        cell.time.text = entries[indexPath.row].time
+
         
         return cell
      }
@@ -46,13 +49,12 @@ class ListeController: UIViewController, UITableViewDelegate, UITableViewDataSou
         let refDatabase = Database.database().reference().child("Eintragae")
         
         refDatabase.observe(.childAdded) { (snapshot) in
-            print(snapshot)
             guard let dic = snapshot.value as? [String: Any] else { return }
-            let newEintrag = EintragModel(dictionary: dic)
-            self.entries.append(newEintrag)
+            let newEntry = EntryModel(dictionary: dic)
+            self.entries.append(newEntry)
             self.table.reloadData()
         }
-        print(refDatabase)
+        print(entries)
     }
 
 

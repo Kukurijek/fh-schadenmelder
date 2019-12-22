@@ -29,6 +29,7 @@
 		C75C2A632381AC2100A3720D /* SchadenEintragController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C75C2A622381AC2100A3720D /* SchadenEintragController.xib */; };
 		C76C3FAD238D5221003D443A /* SchadenListe.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C76C3FAC238D5221003D443A /* SchadenListe.storyboard */; };
 		C76C3FAF238D5658003D443A /* SchadenListeStoryBoardController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C76C3FAE238D5658003D443A /* SchadenListeStoryBoardController.swift */; };
+		C78CE9AD23AFC56700D5C55E /* Entry.swift in Sources */ = {isa = PBXBuildFile; fileRef = C78CE9AC23AFC56700D5C55E /* Entry.swift */; };
 		C794D82A23AD1B38005CFD34 /* MainNew.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C794D82923AD1B38005CFD34 /* MainNew.storyboard */; };
 		C794D82C23AE40AB005CFD34 /* SplashScreenController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C794D82B23AE40AB005CFD34 /* SplashScreenController.swift */; };
 		C794D82E23AE4971005CFD34 /* SettingsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C794D82D23AE4971005CFD34 /* SettingsController.swift */; };
@@ -99,6 +100,7 @@
 		C75C2A622381AC2100A3720D /* SchadenEintragController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SchadenEintragController.xib; sourceTree = "<group>"; };
 		C76C3FAC238D5221003D443A /* SchadenListe.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SchadenListe.storyboard; sourceTree = "<group>"; };
 		C76C3FAE238D5658003D443A /* SchadenListeStoryBoardController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchadenListeStoryBoardController.swift; sourceTree = "<group>"; };
+		C78CE9AC23AFC56700D5C55E /* Entry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Entry.swift; sourceTree = "<group>"; };
 		C794D82923AD1B38005CFD34 /* MainNew.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MainNew.storyboard; sourceTree = "<group>"; };
 		C794D82B23AE40AB005CFD34 /* SplashScreenController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreenController.swift; sourceTree = "<group>"; };
 		C794D82D23AE4971005CFD34 /* SettingsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsController.swift; sourceTree = "<group>"; };
@@ -193,6 +195,7 @@
 				C705C1D9238B462A00B47E46 /* EintragModel.swift */,
 				C705C1DB238BF23A00B47E46 /* testTableViewCell.swift */,
 				C705C1DC238BF23A00B47E46 /* testTableViewCell.xib */,
+				C78CE9AC23AFC56700D5C55E /* Entry.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -621,6 +624,7 @@
 				C705C1DD238BF23A00B47E46 /* testTableViewCell.swift in Sources */,
 				C7CC2228237848C700C71102 /* HomeController.swift in Sources */,
 				C794D82C23AE40AB005CFD34 /* SplashScreenController.swift in Sources */,
+				C78CE9AD23AFC56700D5C55E /* Entry.swift in Sources */,
 				C7CC21F4237842B100C71102 /* ViewController.swift in Sources */,
 				C794D83223AE4CE5005CFD34 /* MeldenController.swift in Sources */,
 				C794D82E23AE4971005CFD34 /* SettingsController.swift in Sources */,
