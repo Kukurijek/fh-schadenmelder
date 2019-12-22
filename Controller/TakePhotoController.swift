@@ -10,12 +10,13 @@ import AVFoundation
 import ProgressHUD
 import Photos
 
-class TakePhotoController: UIViewController {
+class TakePhotoController: UIViewController, AVCapturePhotoCaptureDelegate {
 
     @IBOutlet weak var takePhoto: UIButton!
     @IBOutlet weak var switchCamera: UIButton!
     @IBOutlet weak var back: UIButton!
     @IBOutlet weak var imagePreview: UIImageView!
+    @IBOutlet weak var savePhotoButton: UIButton!
     
     var captureSession = AVCaptureSession()
     var photoOutput = AVCapturePhotoOutput()
@@ -24,6 +25,7 @@ class TakePhotoController: UIViewController {
         super.viewDidLoad()
         setupCaptureSession()
         takePhoto.isHidden = false
+        savePhotoButton.isHidden = true
     }
     
     func setupCaptureSession() {
@@ -97,6 +99,29 @@ class TakePhotoController: UIViewController {
         return nil
     }
     
+    func takePhotoFunc() {
+        let settings = AVCapturePhotoSettings()
+        guard let previewFormatType = settings.availablePreviewPhotoPixelFormatTypes.first else { return }
+        settings.previewPhotoFormat = [kCVPixelBufferPixelFormatTypeKey as String: previewFormatType]
+        photoOutput.capturePhoto(with: settings, delegate: self)
+    }
+    
+    func savePhoto() {
+        let library = PHPhotoLibrary.shared()
+        guard let image = imagePreview.image else { return }
+        
+        library.performChanges({
+            PHAssetChangeRequest.creationRequestForAsset(from: image)
+        }) { (success, error) in
+            if error != nil {
+                ProgressHUD.showError(error?.localizedDescription)
+                return
+            } else {
+                ProgressHUD.showSuccess("Foto gespeichert")
+            }
+        }
+    }
+    
     func cancel() {
         if imagePreview.image == nil {
             dismiss(animated: true, completion: nil)
@@ -113,5 +138,10 @@ class TakePhotoController: UIViewController {
     @IBAction func backPressed(_ sender: Any) {
         cancel()
         takePhoto.isHidden = true
+    }
+    @IBAction func savePhotoPressed(_ sender: Any) {
+        savePhoto()
+        savePhotoButton.isHidden = true
+        takePhoto.isHidden = false
     }
 }

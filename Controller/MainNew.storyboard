@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="qoF-SH-59K">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="qoF-SH-59K">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -150,7 +150,7 @@
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <segue destination="HGz-97-Wc0" kind="presentation" id="K5t-y2-iW7"/>
+                                    <segue destination="HGz-97-Wc0" kind="show" id="K5t-y2-iW7"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bzP-TF-6av">
@@ -244,16 +244,8 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="v5h-6N-qhB">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UNb-wp-ZY7" userLabel="Take">
-                                <rect key="frame" x="139" y="815" width="112" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Foto aufnehmen"/>
-                                <connections>
-                                    <action selector="takePhotoPressed:" destination="HGz-97-Wc0" eventType="touchUpInside" id="FNf-t1-xf0"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kjv-8g-6iH" userLabel="Switch">
-                                <rect key="frame" x="314" y="797" width="79" height="48"/>
+                                <rect key="frame" x="293" y="745" width="79" height="48"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Switch"/>
                                 <connections>
@@ -269,6 +261,22 @@
                                     <action selector="takePhotoPressed:" destination="HGz-97-Wc0" eventType="touchUpInside" id="g8C-tx-Afg"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x3N-tl-HpD">
+                                <rect key="frame" x="8" y="754" width="70" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Speichern"/>
+                                <connections>
+                                    <action selector="savePhotoPressed:" destination="HGz-97-Wc0" eventType="touchUpInside" id="k86-Cj-hOh"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UNb-wp-ZY7" userLabel="Take">
+                                <rect key="frame" x="128" y="754" width="112" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Foto aufnehmen"/>
+                                <connections>
+                                    <action selector="takePhotoPressed:" destination="HGz-97-Wc0" eventType="touchUpInside" id="FNf-t1-xf0"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
@@ -279,9 +287,11 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="hWz-Q3-uLc"/>
                     </view>
+                    <navigationItem key="navigationItem" id="uGB-EE-FOc"/>
                     <connections>
                         <outlet property="back" destination="ugK-my-cNj" id="pu8-vf-x4I"/>
                         <outlet property="imagePreview" destination="v5h-6N-qhB" id="9dP-NT-8XA"/>
+                        <outlet property="savePhotoButton" destination="x3N-tl-HpD" id="HN1-aQ-iUQ"/>
                         <outlet property="switchCamera" destination="Kjv-8g-6iH" id="psC-7O-GaD"/>
                         <outlet property="takePhoto" destination="UNb-wp-ZY7" id="kUi-G5-plu"/>
                     </connections>
@@ -410,7 +420,7 @@
                                 </prototypes>
                             </tableView>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="rSY-JQ-ETI" firstAttribute="trailing" secondItem="PiW-r6-ahm" secondAttribute="trailing" id="5yY-YO-MQ1"/>
                             <constraint firstItem="4xQ-gT-VMh" firstAttribute="leading" secondItem="rSY-JQ-ETI" secondAttribute="leading" id="689-l7-oU8"/>
