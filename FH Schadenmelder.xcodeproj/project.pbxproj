@@ -30,7 +30,6 @@
 		C7CC21F2237842B100C71102 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7CC21F1237842B100C71102 /* AppDelegate.swift */; };
 		C7CC21F7237842B100C71102 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C7CC21F5237842B100C71102 /* Main.storyboard */; };
 		C7CC21F9237842B500C71102 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C7CC21F8237842B500C71102 /* Assets.xcassets */; };
-		C7CC21FC237842B500C71102 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C7CC21FA237842B500C71102 /* LaunchScreen.storyboard */; };
 		C7CC2207237842B500C71102 /* FH_SchadenmelderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7CC2206237842B500C71102 /* FH_SchadenmelderTests.swift */; };
 		C7CC2212237842B600C71102 /* FH_SchadenmelderUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7CC2211237842B600C71102 /* FH_SchadenmelderUITests.swift */; };
 		C7CC22302378513800C71102 /* FH-CAMPUS-WIEN.gif in Resources */ = {isa = PBXBuildFile; fileRef = C7CC222F2378513800C71102 /* FH-CAMPUS-WIEN.gif */; };
@@ -83,7 +82,6 @@
 		C7CC21F1237842B100C71102 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C7CC21F6237842B100C71102 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C7CC21F8237842B500C71102 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		C7CC21FB237842B500C71102 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C7CC21FD237842B500C71102 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C7CC2202237842B500C71102 /* FH SchadenmelderTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "FH SchadenmelderTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C7CC2206237842B500C71102 /* FH_SchadenmelderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FH_SchadenmelderTests.swift; sourceTree = "<group>"; };
@@ -208,7 +206,6 @@
 				C7CC21F1237842B100C71102 /* AppDelegate.swift */,
 				C7CC21F5237842B100C71102 /* Main.storyboard */,
 				C7CC21F8237842B500C71102 /* Assets.xcassets */,
-				C7CC21FA237842B500C71102 /* LaunchScreen.storyboard */,
 				C7CC21FD237842B500C71102 /* Info.plist */,
 			);
 			path = "FH Schadenmelder";
@@ -368,7 +365,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C7CC21FC237842B500C71102 /* LaunchScreen.storyboard in Resources */,
 				C738A697237E9827002A49E3 /* GoogleService-Info.plist in Resources */,
 				C738A695237CA20E002A49E3 /* campus.jpg in Resources */,
 				C7CC22302378513800C71102 /* FH-CAMPUS-WIEN.gif in Resources */,
@@ -559,14 +555,6 @@
 			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
-		C7CC21FA237842B500C71102 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				C7CC21FB237842B500C71102 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
@@ -692,6 +680,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "FH Schadenmelder/FH Schadenmelder.entitlements";
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7FA332Z5WX;
 				INFOPLIST_FILE = "FH Schadenmelder/Info.plist";
@@ -701,6 +690,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.fh.campus..FH-Schadenmelder";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -712,6 +702,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "FH Schadenmelder/FH Schadenmelder.entitlements";
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7FA332Z5WX;
 				INFOPLIST_FILE = "FH Schadenmelder/Info.plist";
@@ -721,6 +712,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.fh.campus..FH-Schadenmelder";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
