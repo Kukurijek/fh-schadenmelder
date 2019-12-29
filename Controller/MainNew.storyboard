@@ -17,7 +17,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="FH-CAMPUS-WIEN.gif" translatesAutoresizingMaskIntoConstraints="NO" id="37g-lE-sIL">
-                                <rect key="frame" x="15" y="367" width="384" height="172"/>
+                                <rect key="frame" x="15" y="281" width="384" height="344"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -320,16 +320,29 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="campus.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="91C-28-voi">
                                 <rect key="frame" x="30" y="74" width="354" height="165"/>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RQm-MC-SIR">
+                                <rect key="frame" x="50" y="433" width="314" height="30"/>
+                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Einstellungen">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="goToSettings:" destination="boG-VE-YsR" eventType="touchUpInside" id="GSf-aJ-LAS"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="91C-28-voi" firstAttribute="leading" secondItem="zFS-Ja-9NM" secondAttribute="leading" constant="30" id="3Sg-aN-QiB"/>
+                            <constraint firstItem="zFS-Ja-9NM" firstAttribute="trailing" secondItem="RQm-MC-SIR" secondAttribute="trailing" constant="50" id="5y2-pu-rjQ"/>
                             <constraint firstItem="zFS-Ja-9NM" firstAttribute="trailing" secondItem="91C-28-voi" secondAttribute="trailing" constant="30" id="CZD-n5-K1p"/>
                             <constraint firstItem="vU5-XC-zsQ" firstAttribute="top" secondItem="91C-28-voi" secondAttribute="bottom" constant="105" id="E0d-hr-eHz"/>
                             <constraint firstItem="vU5-XC-zsQ" firstAttribute="top" secondItem="zFS-Ja-9NM" secondAttribute="top" constant="300" id="Iy0-x0-vQy"/>
                             <constraint firstItem="91C-28-voi" firstAttribute="top" secondItem="zFS-Ja-9NM" secondAttribute="top" constant="30" id="TbB-bv-EeU"/>
                             <constraint firstItem="vU5-XC-zsQ" firstAttribute="leading" secondItem="zFS-Ja-9NM" secondAttribute="leading" constant="50" id="Zlh-gq-uEj"/>
+                            <constraint firstItem="RQm-MC-SIR" firstAttribute="leading" secondItem="zFS-Ja-9NM" secondAttribute="leading" constant="50" id="epk-dP-vZ2"/>
                             <constraint firstItem="zFS-Ja-9NM" firstAttribute="trailing" secondItem="vU5-XC-zsQ" secondAttribute="trailing" constant="50" id="wiv-y5-5y1"/>
+                            <constraint firstItem="RQm-MC-SIR" firstAttribute="top" secondItem="vU5-XC-zsQ" secondAttribute="bottom" constant="59" id="xJW-se-0zF"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="zFS-Ja-9NM"/>
                     </view>

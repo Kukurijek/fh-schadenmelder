@@ -32,4 +32,11 @@ class SettingsController: UIViewController {
         self.present(nextVC, animated: true, completion: nil)
     }
     
+    @IBAction func goToSettings(_ sender: Any) {
+        if let url = URL(string: UIApplication.openSettingsURLString) {
+            if UIApplication.shared.canOpenURL(url) {
+                UIApplication.shared.open(url, options: [:], completionHandler: nil)
+            }
+        }
+    }
 }
