@@ -11,6 +11,7 @@ pod 'FirebaseCore'
 pod 'FirebaseAuth'
 pod 'Firebase/Database'
 pod 'FirebaseStorage'
+pod 'Firebase/Messaging'
 pod 'ProgressHUD'
 pod 'SDWebImage'
 # add pods for any other desired Firebase products

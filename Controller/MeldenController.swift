@@ -158,6 +158,13 @@ class MeldenController: UIViewController, UINavigationControllerDelegate, UIImag
          dismiss(animated: true, completion: nil)
      }
     
+    func sendAPushNotification() {
+        let message = UNMutableNotificationContent()
+        message.body = "Ein neuer Schaden wurde gemeldet!"
+        
+       // let request
+    }
+    
     @IBAction func sendButtonPressed(_ sender: Any) {
         print("sending data")
         uploadNewDamageEntryToDatabase()
