@@ -207,6 +207,7 @@
 				C7CC21F5237842B100C71102 /* Main.storyboard */,
 				C7CC21F8237842B500C71102 /* Assets.xcassets */,
 				C7CC21FD237842B500C71102 /* Info.plist */,
+				C738A696237E9827002A49E3 /* GoogleService-Info.plist */,
 			);
 			path = "FH Schadenmelder";
 			sourceTree = "<group>";
@@ -225,7 +226,6 @@
 			children = (
 				C7CC2211237842B600C71102 /* FH_SchadenmelderUITests.swift */,
 				C7CC2213237842B600C71102 /* Info.plist */,
-				C738A696237E9827002A49E3 /* GoogleService-Info.plist */,
 			);
 			path = "FH SchadenmelderUITests";
 			sourceTree = "<group>";
