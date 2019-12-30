@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="qoF-SH-59K">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="qoF-SH-59K">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -17,7 +17,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="FH-CAMPUS-WIEN.gif" translatesAutoresizingMaskIntoConstraints="NO" id="37g-lE-sIL">
-                                <rect key="frame" x="15" y="281" width="384" height="344"/>
+                                <rect key="frame" x="15" y="367" width="384" height="172"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -244,44 +244,53 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="v5h-6N-qhB">
                                 <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kjv-8g-6iH" userLabel="Switch">
-                                <rect key="frame" x="293" y="745" width="79" height="48"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Switch"/>
-                                <connections>
-                                    <action selector="switchCameraPressed:" destination="HGz-97-Wc0" eventType="touchUpInside" id="mEU-rl-j8d"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ugK-my-cNj" userLabel="Back">
-                                <rect key="frame" x="272" y="61" width="121" height="56"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ugK-my-cNj" userLabel="Back">
+                                <rect key="frame" x="272" y="61" width="121" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="121" id="xPO-0R-ghJ"/>
+                                </constraints>
                                 <state key="normal" title="Löschen/Zurück"/>
                                 <connections>
                                     <action selector="backPressed:" destination="HGz-97-Wc0" eventType="touchUpInside" id="MQP-oq-BF9"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x3N-tl-HpD">
-                                <rect key="frame" x="8" y="754" width="70" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Speichern"/>
+                            <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kjv-8g-6iH" userLabel="Switch">
+                                <rect key="frame" x="352" y="762" width="47" height="30"/>
+                                <state key="normal" title="Switch"/>
                                 <connections>
-                                    <action selector="savePhotoPressed:" destination="HGz-97-Wc0" eventType="touchUpInside" id="k86-Cj-hOh"/>
+                                    <action selector="switchCameraPressed:" destination="HGz-97-Wc0" eventType="touchUpInside" id="mEU-rl-j8d"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UNb-wp-ZY7" userLabel="Take">
-                                <rect key="frame" x="128" y="754" width="112" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UNb-wp-ZY7" userLabel="Take">
+                                <rect key="frame" x="187" y="762" width="112" height="30"/>
                                 <state key="normal" title="Foto aufnehmen"/>
                                 <connections>
                                     <action selector="takePhotoPressed:" destination="HGz-97-Wc0" eventType="touchUpInside" id="FNf-t1-xf0"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x3N-tl-HpD">
+                                <rect key="frame" x="15" y="762" width="90" height="30"/>
+                                <state key="normal" title="Speichern"/>
+                                <connections>
+                                    <action selector="savePhotoPressed:" destination="HGz-97-Wc0" eventType="touchUpInside" id="k86-Cj-hOh"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="hWz-Q3-uLc" firstAttribute="bottom" secondItem="x3N-tl-HpD" secondAttribute="bottom" constant="70" id="4LA-BT-c2i"/>
                             <constraint firstItem="hWz-Q3-uLc" firstAttribute="bottom" secondItem="v5h-6N-qhB" secondAttribute="bottom" id="93L-n1-apQ"/>
                             <constraint firstItem="v5h-6N-qhB" firstAttribute="leading" secondItem="hWz-Q3-uLc" secondAttribute="leading" id="9lz-FX-4nB"/>
+                            <constraint firstItem="hWz-Q3-uLc" firstAttribute="trailing" secondItem="ugK-my-cNj" secondAttribute="trailing" constant="21" id="AMN-0D-sRy"/>
+                            <constraint firstItem="hWz-Q3-uLc" firstAttribute="bottom" secondItem="UNb-wp-ZY7" secondAttribute="bottom" constant="70" id="CU3-P1-zzN"/>
+                            <constraint firstItem="Kjv-8g-6iH" firstAttribute="leading" relation="lessThanOrEqual" secondItem="UNb-wp-ZY7" secondAttribute="trailing" constant="53" id="MtF-WM-m7S"/>
+                            <constraint firstItem="UNb-wp-ZY7" firstAttribute="leading" relation="lessThanOrEqual" secondItem="x3N-tl-HpD" secondAttribute="trailing" constant="82" id="Uye-va-0dx"/>
+                            <constraint firstItem="x3N-tl-HpD" firstAttribute="leading" secondItem="hWz-Q3-uLc" secondAttribute="leading" constant="15" id="Z70-4F-6iS"/>
+                            <constraint firstItem="ugK-my-cNj" firstAttribute="leading" relation="lessThanOrEqual" secondItem="hWz-Q3-uLc" secondAttribute="leading" constant="272" id="bBO-w0-OAj"/>
+                            <constraint firstItem="ugK-my-cNj" firstAttribute="top" secondItem="hWz-Q3-uLc" secondAttribute="top" constant="17" id="bIv-Hk-dBG"/>
+                            <constraint firstItem="hWz-Q3-uLc" firstAttribute="trailing" secondItem="Kjv-8g-6iH" secondAttribute="trailing" constant="15" id="eRC-uz-3SO"/>
                             <constraint firstItem="hWz-Q3-uLc" firstAttribute="trailing" secondItem="v5h-6N-qhB" secondAttribute="trailing" id="edf-u9-LFL"/>
+                            <constraint firstItem="hWz-Q3-uLc" firstAttribute="bottom" secondItem="Kjv-8g-6iH" secondAttribute="bottom" constant="70" id="gr2-O7-UBq"/>
                             <constraint firstItem="v5h-6N-qhB" firstAttribute="top" secondItem="hWz-Q3-uLc" secondAttribute="top" id="xMg-tJ-lhG"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="hWz-Q3-uLc"/>
