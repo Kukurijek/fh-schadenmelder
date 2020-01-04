@@ -34,7 +34,7 @@
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
 	<key>NSCameraUsageDescription</key>
-	<string>Access to Camera</string>
+	<string>To be able to make photos for the app</string>
 	<key>NSPhotoLibraryUsageDescription</key>
 	<string>Zugriff auf Photos um das Foto abzuspeichern</string>
 	<key>UIBackgroundModes</key>
