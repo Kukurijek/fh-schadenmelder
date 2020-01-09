@@ -9,6 +9,7 @@
 import UIKit
 import FirebaseDatabase
 import SDWebImage
+import ProgressHUD
 
 
 class ListeController: UIViewController, UITableViewDelegate, UITableViewDataSource {
@@ -22,12 +23,18 @@ class ListeController: UIViewController, UITableViewDelegate, UITableViewDataSou
         return true
     }
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         table.delegate = self
         table.dataSource = self
         loadEntries()
-            
+        //table.allowsSelection = false
+
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        loadEntriesChanged()
     }
 
      func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -46,16 +53,15 @@ class ListeController: UIViewController, UITableViewDelegate, UITableViewDataSou
         cell.icon.sd_setImage(with: url ) { (_, _, _, _) in
         }
         cell.time.text = entries[indexPath.row].time
+        cell.note = entries[indexPath.row].note
 
         
         return cell
      }
-    
 
      
     func loadEntries() {
         let refDatabase = Database.database().reference().child("Eintragae")
-        
         refDatabase.observe(.childAdded) { (snapshot) in
             guard let dic = snapshot.value as? [String: Any] else { return }
             let newEntry = EntryModel(dictionary: dic)
@@ -65,32 +71,55 @@ class ListeController: UIViewController, UITableViewDelegate, UITableViewDataSou
         print(entries)
     }
     
-//    func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
-//        let cell = table.cellForRow(at: indexPath) as! EntriesListCell
-//        self.addIm
-//    }
+    func loadEntriesChanged() {
+        let refDatabase = Database.database().reference().child("Eintragae")
+        refDatabase.observe(.childRemoved) { (snapshot) in
+            guard let dic = snapshot.value as? [String: Any] else { return }
+            let newEntry = EntryModel(dictionary: dic)
+            self.entries = [newEntry]
+            self.table.reloadData()
+        }
+        print(entries)
+    }
+    
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let cell = tableView.cellForRow(at: indexPath) as! EntriesListCell
-        self.imageTapped(image: cell.icon.image!)
+        self.imageTapped(image: cell.icon.image!, note: cell.note)
     }
     
-    func imageTapped(image:UIImage){
+    func imageTapped(image:UIImage, note: String?){
         let newImageView = UIImageView(image: image)
         newImageView.frame = UIScreen.main.bounds
         newImageView.backgroundColor = .black
         newImageView.contentMode = .scaleAspectFit
         newImageView.isUserInteractionEnabled = true
-        let tap = UITapGestureRecognizer(target: self, action: #selector(ShowImageFullSizeController.dismissFullscreenImage(_:)))
-        newImageView.addGestureRecognizer(tap)
-        self.view.addSubview(newImageView)
+        
+        let textView = UITextView()
+        textView.frame = UIScreen.main.bounds
+        textView.textAlignment = NSTextAlignment.center
+        textView.textColor = UIColor.red
+        textView.backgroundColor = UIColor.white
+        textView.text = note
+        
+        let tap = UITapGestureRecognizer(target: self, action: #selector(ShowImageFullSizeController.dismissTextView(_:)))
+        let tap2 = UITapGestureRecognizer(target: self, action: #selector(ShowImageFullSizeController.dismissFullscreenImage(_:)))
+        newImageView.addGestureRecognizer(tap2)
+        textView.addGestureRecognizer(tap)
         self.navigationController?.isNavigationBarHidden = true
         self.tabBarController?.tabBar.isHidden = true
+        self.view.addSubview(newImageView)
+        self.view.addSubview(textView)
+
     }
 
     @objc func dismissFullscreenImage(_ sender: UITapGestureRecognizer) {
         self.navigationController?.isNavigationBarHidden = false
         self.tabBarController?.tabBar.isHidden = false
+        sender.view?.removeFromSuperview()
+    }
+    
+    @objc func dismissTextView(_ sender: UITapGestureRecognizer) {
         sender.view?.removeFromSuperview()
     }
 }

@@ -14,6 +14,7 @@ class EntriesListCell: UITableViewCell {
     @IBOutlet weak var time: UILabel!
     @IBOutlet weak var category: UILabel!
     @IBOutlet weak var icon: UIImageView!
+    var note: String?
     
     
     override func awakeFromNib() {

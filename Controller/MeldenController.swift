@@ -148,6 +148,9 @@ class MeldenController: UIViewController, UINavigationControllerDelegate, UIImag
     }
 
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        if typeOfDamage.text?.count ?? 0 > 0 && placeOfDamage.text?.count ?? 0 > 0 {
+            send.isHidden = false
+        }
          if let editedPhoto = info[.cropRect] as? UIImage {
              image.image = editedPhoto
              selectedImage = editedPhoto
