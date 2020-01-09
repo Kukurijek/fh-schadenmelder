@@ -386,7 +386,7 @@
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="EntriesListCellIdentifier" rowHeight="125" id="BkB-B7-hdr" customClass="EntriesListCell" customModule="FH_Schadenmelder" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="414" height="125"/>
                                         <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" restorationIdentifier="EntriesListCellIdentifier" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="BkB-B7-hdr" id="NI9-v3-l4x">
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="center" restorationIdentifier="EntriesListCellIdentifier" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="BkB-B7-hdr" id="NI9-v3-l4x">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="125"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
@@ -446,7 +446,7 @@
                                         <connections>
                                             <outlet property="category" destination="tzE-HV-lZ1" id="Kwi-7L-xZJ"/>
                                             <outlet property="date" destination="6EE-wP-Q5K" id="0BL-eH-bma"/>
-                                            <outlet property="icon" destination="4FD-74-BE6" id="JGc-3s-cJt"/>
+                                            <outlet property="icon" destination="4FD-74-BE6" id="N6w-la-uXp"/>
                                             <outlet property="time" destination="FmQ-Rn-Qnj" id="3Sk-33-e9p"/>
                                             <outlet property="title" destination="SdL-X5-Xph" id="0dv-lA-UmJ"/>
                                         </connections>
@@ -474,6 +474,32 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bAG-fn-Gmi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2439.130434782609" y="-843.08035714285711"/>
+        </scene>
+        <!--Show Image Full Size Controller-->
+        <scene sceneID="tsb-Vr-L3p">
+            <objects>
+                <viewController id="EGZ-QK-Jmt" customClass="ShowImageFullSizeController" customModule="FH_Schadenmelder" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="GZU-V2-HRo">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Zi7-nz-z97">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="Zi7-nz-z97" firstAttribute="top" secondItem="83c-wg-jmG" secondAttribute="top" id="IQP-4a-g6R"/>
+                            <constraint firstItem="83c-wg-jmG" firstAttribute="bottom" secondItem="Zi7-nz-z97" secondAttribute="bottom" id="eyB-Em-4hs"/>
+                            <constraint firstItem="83c-wg-jmG" firstAttribute="trailing" secondItem="Zi7-nz-z97" secondAttribute="trailing" id="uY4-CA-VjW"/>
+                            <constraint firstItem="Zi7-nz-z97" firstAttribute="leading" secondItem="83c-wg-jmG" secondAttribute="leading" id="z88-8W-yjy"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="83c-wg-jmG"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ivv-fy-McH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3562" y="-874"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="2Er-Nf-b3R">
