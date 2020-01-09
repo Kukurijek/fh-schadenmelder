@@ -37,7 +37,12 @@ class MeldenController: UIViewController, UINavigationControllerDelegate, UIImag
     
     override func viewDidAppear(_ animated: Bool) {
         addTargetToTheTextField()
-        send.isHidden = true
+        if (typeOfDamage.text?.count ?? 0 > 0 && placeOfDamage.text?.count ?? 0 > 0) {
+            send.isHidden = false
+        } else {
+            send.isHidden = true
+        }
+        
     }
     
     // MARK: - Dismiss Keyboard
@@ -148,7 +153,7 @@ class MeldenController: UIViewController, UINavigationControllerDelegate, UIImag
     }
 
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
-        if typeOfDamage.text?.count ?? 0 > 0 && placeOfDamage.text?.count ?? 0 > 0 {
+        if (typeOfDamage.text?.count ?? 0 > 0 && placeOfDamage.text?.count ?? 0 > 0) {
             send.isHidden = false
         }
          if let editedPhoto = info[.cropRect] as? UIImage {
@@ -165,20 +170,28 @@ class MeldenController: UIViewController, UINavigationControllerDelegate, UIImag
         let message = UNMutableNotificationContent()
         message.body = "Ein neuer Schaden wurde gemeldet!"
         
-       // let request
     }
     
     @IBAction func sendButtonPressed(_ sender: Any) {
         print("sending data")
         uploadNewDamageEntryToDatabase()
         print("done")
+        typeOfDamage.text = ""
+        placeOfDamage.text = ""
+        note.text = ""
     }
     
     @IBAction func deletePhotoPressed(_ sender: Any) {
+        if (typeOfDamage.text?.count ?? 0 > 0 && placeOfDamage.text?.count ?? 0 > 0) {
+            send.isHidden = false
+        }
         let imageTemp = UIImage(named: "image.jpg")
         image.image = imageTemp
     }
     @IBAction func makePhotoPressed(_ sender: Any) {
+        if (typeOfDamage.text?.count ?? 0 > 0 && placeOfDamage.text?.count ?? 0 > 0) {
+            send.isHidden = false
+        }
         let nextVC = self.storyboard?.instantiateViewController(withIdentifier: "cameraviewcontroller") as! TakePhotoController
         nextVC.modalPresentationStyle = .fullScreen
         self.present(nextVC, animated: true, completion: nil)
