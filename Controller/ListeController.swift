@@ -90,14 +90,19 @@ class ListeController: UIViewController, UITableViewDelegate, UITableViewDataSou
     
     func imageTapped(image:UIImage, note: String?){
         let newImageView = UIImageView(image: image)
-        newImageView.frame = UIScreen.main.bounds
+        
+        let wsa = UIScreen.main.widthOfSafeArea()
+        let hsa = UIScreen.main.heightOfSafeArea()
+        newImageView.frame = CGRect(x: 0, y: 0, width: wsa, height: hsa)
         newImageView.backgroundColor = .black
         newImageView.contentMode = .scaleAspectFit
         newImageView.isUserInteractionEnabled = true
         
         let textView = UITextView()
-        textView.frame = UIScreen.main.bounds
-        textView.textAlignment = NSTextAlignment.center
+        
+        
+        textView.frame = CGRect(x: 0, y: 0, width: wsa, height: hsa)
+        textView.font = UIFont(name: textView.font?.fontName ?? "HelveticaNeue-Bold", size: 18)
         textView.textColor = UIColor.red
         textView.backgroundColor = UIColor.white
         textView.text = note

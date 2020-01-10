@@ -42,7 +42,9 @@ class MeldenController: UIViewController, UINavigationControllerDelegate, UIImag
         } else {
             send.isHidden = true
         }
-        
+        typeOfDamage.text = ""
+        placeOfDamage.text = ""
+        note.text = ""
     }
     
     // MARK: - Dismiss Keyboard
@@ -104,7 +106,7 @@ class MeldenController: UIViewController, UINavigationControllerDelegate, UIImag
         
         var schadenOrtString: String = ""
         var schadenArtString: String = ""
-        var schadenNotizString: String = ""
+        var schadenNotizString: String = "\n \n \n \n"
         
         
         let date = Date()
@@ -117,7 +119,7 @@ class MeldenController: UIViewController, UINavigationControllerDelegate, UIImag
         let result = formatter.string(from: date)
         
         
-        schadenNotizString = String(note.text!)
+        schadenNotizString += String(note.text!)
         schadenArtString = String(typeOfDamage.text!)
         schadenOrtString = String(placeOfDamage.text!)
         
@@ -176,9 +178,6 @@ class MeldenController: UIViewController, UINavigationControllerDelegate, UIImag
         print("sending data")
         uploadNewDamageEntryToDatabase()
         print("done")
-        typeOfDamage.text = ""
-        placeOfDamage.text = ""
-        note.text = ""
     }
     
     @IBAction func deletePhotoPressed(_ sender: Any) {
