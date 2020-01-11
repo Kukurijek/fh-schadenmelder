@@ -98,7 +98,7 @@ class ListeController: UIViewController, UITableViewDelegate, UITableViewDataSou
         let hsa = UIScreen.main.heightOfSafeArea()
         newImageView.frame = CGRect(x: 0, y: 0, width: wsa, height: hsa)
         newImageView.backgroundColor = .black
-        newImageView.contentMode = .scaleAspectFit
+        newImageView.contentMode = .scaleAspectFill
         newImageView.isUserInteractionEnabled = true
         
         let textView = UITextView()

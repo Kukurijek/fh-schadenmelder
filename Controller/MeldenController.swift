@@ -45,7 +45,6 @@ class MeldenController: UIViewController, UINavigationControllerDelegate, UIImag
         typeOfDamage.text = ""
         placeOfDamage.text = ""
         note.text = ""
-        image.image = UIImage(named: "image.jpg")
     }
     
     // MARK: - Dismiss Keyboard
@@ -180,6 +179,7 @@ class MeldenController: UIViewController, UINavigationControllerDelegate, UIImag
         print("sending data")
         uploadNewDamageEntryToDatabase()
         print("done")
+        image.image = UIImage(named: "image.jpg")
     }
     
     @IBAction func deletePhotoPressed(_ sender: Any) {
