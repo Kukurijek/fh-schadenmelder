@@ -108,6 +108,7 @@ class MeldenController: UIViewController, UINavigationControllerDelegate, UIImag
         var schadenArtString: String = ""
         var schadenNotizString: String = ""
         let status: String = "gemeldet"
+        let responsiblePerson: String = "nicht zugewiesen"
         
         
         let date = Date()
@@ -125,7 +126,7 @@ class MeldenController: UIViewController, UINavigationControllerDelegate, UIImag
         schadenOrtString = String(placeOfDamage.text!)
         
         
-        databaseRef.setValue(["Foto" : imageUrl, "Schadenart" : schadenArtString, "Schadenort" : schadenOrtString, "Notiz" : schadenNotizString, "Status": status, "Date": result, "Time": "\(hour):\(minutes)"]) { (error, ref) in
+        databaseRef.setValue(["Foto" : imageUrl, "Schadenart" : schadenArtString, "Schadenort" : schadenOrtString, "Notiz" : schadenNotizString,"responsible person": responsiblePerson, "Status": status, "Date": result, "Time": "\(hour):\(minutes)"]) { (error, ref) in
             if error != nil {
                 ProgressHUD.showError("Daten konnten nicht hochgeladen werden")
                 return

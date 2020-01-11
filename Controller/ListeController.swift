@@ -55,8 +55,9 @@ class ListeController: UIViewController, UITableViewDelegate, UITableViewDataSou
         cell.time.text = entries[indexPath.row].time
         let status = entries[indexPath.row].status
         let note = entries[indexPath.row].note
-        let statusAndNote = "\n \n \n \nStatus:  \(status ?? "")  \n \n\(note ?? "")"
-        cell.note = statusAndNote
+        let responsiblePerson = entries[indexPath.row].responsiblePerson
+        let statusAndNoteAndRP = "\n \n \n \nStatus:  \(status ?? "")  \n \nZuständig: \(responsiblePerson ?? "")\n \n\(note ?? "")"
+        cell.note = statusAndNoteAndRP
 
         
         return cell
