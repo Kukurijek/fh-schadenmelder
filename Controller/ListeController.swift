@@ -53,7 +53,10 @@ class ListeController: UIViewController, UITableViewDelegate, UITableViewDataSou
         cell.icon.sd_setImage(with: url ) { (_, _, _, _) in
         }
         cell.time.text = entries[indexPath.row].time
-        cell.note = entries[indexPath.row].note
+        let status = entries[indexPath.row].status
+        let note = entries[indexPath.row].note
+        let statusAndNote = "Status:  \(status ?? "")  \n \n  \(note ?? "")"
+        cell.note = statusAndNote
 
         
         return cell
@@ -76,7 +79,7 @@ class ListeController: UIViewController, UITableViewDelegate, UITableViewDataSou
         refDatabase.observe(.childRemoved) { (snapshot) in
             guard let dic = snapshot.value as? [String: Any] else { return }
             let newEntry = EntryModel(dictionary: dic)
-            self.entries = [newEntry]
+            self.entries = self.entries.filter() { $0 !== newEntry }
             self.table.reloadData()
         }
         print(entries)

@@ -15,6 +15,7 @@ class EntryModel {
     var damagePlace: String?
     var damageType: String?
     var photo: String?
+    var status: String?
     
     init(dictionary: [String: Any] ) {
         date = dictionary["Date"] as? String
@@ -23,6 +24,8 @@ class EntryModel {
         damagePlace = dictionary["Schadenort"] as? String
         time = dictionary["Time"] as? String
         photo = dictionary["Foto"] as? String
+        status = dictionary["Status"] as? String
+
     }
     
 }
