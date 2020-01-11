@@ -107,8 +107,8 @@ class MeldenController: UIViewController, UINavigationControllerDelegate, UIImag
         
         var schadenOrtString: String = ""
         var schadenArtString: String = ""
-        var schadenNotizString: String = "\n \n \n \n"
-        var status: String = "gemeldet"
+        var schadenNotizString: String = ""
+        let status: String = "\n \n \n \n gemeldet"
         
         
         let date = Date()
