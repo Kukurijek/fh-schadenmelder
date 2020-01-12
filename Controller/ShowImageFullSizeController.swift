@@ -25,4 +25,8 @@ class ShowImageFullSizeController: UIViewController {
     @objc func dismissTextView(_ sender: UITapGestureRecognizer) {
         sender.view?.removeFromSuperview()
     }
+    
+    @objc func dismissView(_ sender: UITapGestureRecognizer) {
+        sender.view?.removeFromSuperview()
+    }
 }

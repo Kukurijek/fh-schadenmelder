@@ -33,6 +33,7 @@
 		C7CC2207237842B500C71102 /* FH_SchadenmelderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7CC2206237842B500C71102 /* FH_SchadenmelderTests.swift */; };
 		C7CC2212237842B600C71102 /* FH_SchadenmelderUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7CC2211237842B600C71102 /* FH_SchadenmelderUITests.swift */; };
 		C7CC22302378513800C71102 /* FH-CAMPUS-WIEN.gif in Resources */ = {isa = PBXBuildFile; fileRef = C7CC222F2378513800C71102 /* FH-CAMPUS-WIEN.gif */; };
+		C7D420A023CB498A00BF7945 /* Role.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7D4209F23CB498A00BF7945 /* Role.swift */; };
 		C7FA4AB623C7B73A00E9EECD /* ShowImageFullSizeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7FA4AB523C7B73A00E9EECD /* ShowImageFullSizeController.swift */; };
 		EF4EE25604E97FA447B2DE15 /* Pods_FH_Schadenmelder.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 26502B4B308BE53487099F10 /* Pods_FH_Schadenmelder.framework */; };
 /* End PBXBuildFile section */
@@ -91,6 +92,7 @@
 		C7CC2211237842B600C71102 /* FH_SchadenmelderUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FH_SchadenmelderUITests.swift; sourceTree = "<group>"; };
 		C7CC2213237842B600C71102 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C7CC222F2378513800C71102 /* FH-CAMPUS-WIEN.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "FH-CAMPUS-WIEN.gif"; sourceTree = "<group>"; };
+		C7D4209F23CB498A00BF7945 /* Role.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Role.swift; sourceTree = "<group>"; };
 		C7FA4AB523C7B73A00E9EECD /* ShowImageFullSizeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowImageFullSizeController.swift; sourceTree = "<group>"; };
 		D770F4B11A2A2AC52E2EC0CC /* Pods-FH Schadenmelder-FH SchadenmelderUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FH Schadenmelder-FH SchadenmelderUITests.debug.xcconfig"; path = "Target Support Files/Pods-FH Schadenmelder-FH SchadenmelderUITests/Pods-FH Schadenmelder-FH SchadenmelderUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		D7A7BC8DE72772D5E912F6E8 /* Pods_FH_Schadenmelder_FH_SchadenmelderUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FH_Schadenmelder_FH_SchadenmelderUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -178,6 +180,7 @@
 		C7CC21E5237842B100C71102 = {
 			isa = PBXGroup;
 			children = (
+				C7D4209F23CB498A00BF7945 /* Role.swift */,
 				C705C1D8238B45FA00B47E46 /* Model */,
 				C7CC222E2378511E00C71102 /* img */,
 				C7CC221F2378449400C71102 /* Controller */,
@@ -514,6 +517,7 @@
 				C794D83423AE4F3D005CFD34 /* ListeController.swift in Sources */,
 				C7CC21F2237842B100C71102 /* AppDelegate.swift in Sources */,
 				C794D83923AE8964005CFD34 /* AuthController.swift in Sources */,
+				C7D420A023CB498A00BF7945 /* Role.swift in Sources */,
 				C794D83723AE5291005CFD34 /* EntriesListCell.swift in Sources */,
 				C738A693237C8950002A49E3 /* extensions.swift in Sources */,
 			);

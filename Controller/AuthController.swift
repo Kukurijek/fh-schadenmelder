@@ -9,13 +9,15 @@
 import UIKit
 import ProgressHUD
 import FirebaseAuth
+import FirebaseDatabase
+
 
 class AuthController: UIViewController {
 
     @IBOutlet weak var username: UITextField!
     @IBOutlet weak var password: UITextField!
     @IBOutlet weak var loginButton: UIButton!
-    
+        
     override var prefersStatusBarHidden: Bool {
         return true
     }
@@ -47,7 +49,8 @@ class AuthController: UIViewController {
 
     @IBAction func loginButtonPressed(_ sender: Any) {
         ProgressHUD.show("Laden...", interaction: false)
-        
+        Role.email = self.username.text!
+
         Auth.auth().signIn(withEmail: username.text!, password: password.text!) { (user, error) in
             if let err = error {
                 print(err.localizedDescription)
@@ -56,11 +59,13 @@ class AuthController: UIViewController {
             }
             print("Login successful")
             ProgressHUD.showSuccess("Login erfolgreich")
-                
+            
+        
         
         let homeViewController = self.storyboard?.instantiateViewController(withIdentifier: "mainviewcontroller") as? UITabBarController
         self.view.window?.rootViewController = homeViewController
         self.view.window?.makeKeyAndVisible()
+            
         }
 
     }

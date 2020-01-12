@@ -30,7 +30,6 @@ class ListeController: UIViewController, UITableViewDelegate, UITableViewDataSou
         table.dataSource = self
         loadEntries()
         //table.allowsSelection = false
-
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -103,25 +102,51 @@ class ListeController: UIViewController, UITableViewDelegate, UITableViewDataSou
         newImageView.isUserInteractionEnabled = true
         
         let textView = UITextView()
-        
-        
         textView.frame = CGRect(x: 0, y: 0, width: wsa, height: hsa)
         textView.font = UIFont(name: textView.font?.fontName ?? "HelveticaNeue-Bold", size: 18)
         textView.textColor = UIColor.red
         textView.backgroundColor = UIColor.white
         textView.text = note
         
+        let buttonView = UIView()
+        buttonView.frame = CGRect(x: 0, y: 0, width: wsa, height: hsa)
+        buttonView.backgroundColor = .black
+        buttonView.isUserInteractionEnabled = true
+        
+        let button = UIButton(frame: CGRect(x: 100, y: 100, width: 100, height: 50))
+        button.backgroundColor = .green
+        button.setTitle("Erledigt", for: .normal)
+        button.tintColor = .red
+        button.center = buttonView.center
+        button.addTarget(self, action: #selector(buttonAction), for: .touchUpInside)
+        
+        buttonView.addSubview(button)
+ 
+        
         let tap = UITapGestureRecognizer(target: self, action: #selector(ShowImageFullSizeController.dismissTextView(_:)))
         let tap2 = UITapGestureRecognizer(target: self, action: #selector(ShowImageFullSizeController.dismissFullscreenImage(_:)))
+        let tap3 = UITapGestureRecognizer(target: self, action: #selector(ShowImageFullSizeController.dismissView(_:)))
+        
+        
         newImageView.addGestureRecognizer(tap2)
         textView.addGestureRecognizer(tap)
+        buttonView.addGestureRecognizer(tap3)
+        
         self.navigationController?.isNavigationBarHidden = true
         self.tabBarController?.tabBar.isHidden = true
         self.view.addSubview(newImageView)
+        if Role.email == "test2@gmail.com" {
+            self.view.addSubview(buttonView)
+        }
         self.view.addSubview(textView)
+
 
     }
 
+    @objc func buttonAction(sender: UIButton!) {
+       print("Button tapped")
+     }
+    
     @objc func dismissFullscreenImage(_ sender: UITapGestureRecognizer) {
         self.navigationController?.isNavigationBarHidden = false
         self.tabBarController?.tabBar.isHidden = false
@@ -129,6 +154,10 @@ class ListeController: UIViewController, UITableViewDelegate, UITableViewDataSou
     }
     
     @objc func dismissTextView(_ sender: UITapGestureRecognizer) {
+        sender.view?.removeFromSuperview()
+    }
+    
+    @objc func dismissView(_ sender: UITapGestureRecognizer) {
         sender.view?.removeFromSuperview()
     }
 }
