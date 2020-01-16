@@ -113,7 +113,7 @@ class ListeController: UIViewController, UITableViewDelegate, UITableViewDataSou
         buttonView.backgroundColor = .black
         buttonView.isUserInteractionEnabled = true
         
-        let button = UIButton(frame: CGRect(x: 100, y: 100, width: 100, height: 50))
+        let button = UIButton(frame: CGRect(x: 100, y: 100, width: 130, height: 50))
         button.backgroundColor = .green
         button.setTitle("Erledigt", for: .normal)
         button.tintColor = .red
@@ -145,6 +145,7 @@ class ListeController: UIViewController, UITableViewDelegate, UITableViewDataSou
 
     @objc func buttonAction(sender: UIButton!) {
        print("Button tapped")
+        sender.setTitle("Weitergeleitet", for: .normal)
      }
     
     @objc func dismissFullscreenImage(_ sender: UITapGestureRecognizer) {
