@@ -12,4 +12,4 @@ blocks:
       jobs:
         - name: Tests
           commands:
-            - make test
+            - echo "opaaa"
